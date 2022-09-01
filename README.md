@@ -14,10 +14,10 @@
 
 2- open the file "index.html" on your browser.
 
-### Week 01
+### Week 00 Figma
 Me and my coworker (Ramiro Amadeo) create the landing desktop interface with Figma.
-### Week 02
+### Week 01 HTML
 I create the HTML code for the Landing Desktop page. 
 I also create this readme.
-### Week 03
+### Week 02 CSS
 next week...

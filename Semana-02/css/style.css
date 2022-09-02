@@ -1,0 +1,31 @@
+main , header{
+    width: 1288px;
+    margin-left: 152px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+#sidebar{
+    position:fixed;
+    width: 152px;
+    background-color: white;
+}
+
+.logo{
+    background-color: #373867;
+    opacity: 0.4;
+}
+
+.sidebar-home{
+    margin-left: 25px;
+}
+
+.sidebar-text{
+    height: 20px;
+    margin-top: 60px, auto;
+    border: 2px solid#ccc;
+    padding: 10px;
+    position:relative;
+    top: 10px;
+}

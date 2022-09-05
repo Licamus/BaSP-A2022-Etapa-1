@@ -89,6 +89,8 @@ header{
     margin-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
+    line-height: 30px;
+    font-size: 16px;
 }
 
 #head-rectangle > h1 {
@@ -96,6 +98,7 @@ header{
     padding-bottom: 20px;
     padding-left: 40px;
     display: block;
+    font-size: 40px;
 }
 
 #head-rectangle > h2 {
@@ -108,6 +111,7 @@ header{
     height: 800px;
     text-align: center;
     padding: 100px 50px;
+    line-height: 30px;
 }
 
 #who-we-are > h2{     
@@ -117,10 +121,12 @@ header{
 #who-blue{
     color: #373867;
     margin-bottom: 30px;
+    font-size: 20px;
 }
 
 #who-green{
     color:#AACE9B;
+    font-size: 18px;
 }
 
 /* Why choose us*/
@@ -139,49 +145,57 @@ header{
     width: 600px;
     height: 350px;
     display: inline-block;
-    background-color: aqua;
     float: left ;
 }
 
 .why-left > img{
     height: 400px;
     width: 513px;
+    margin-top: 220px;
+    margin-left: 100px;
     display: inline-block;
 }
 
 .why-left-text > h3{
-
+    margin-top: 247px;
+    font-size: 50px;
 }
 
 .why-left-text > p{
-
+    margin-top: 64px;
+    line-height: 30px;
+    font-size: 30px;
 }
 
 .why-right{
     height: 840px;
+    background-color: #D9D9D9;
 }
 
 .why-right-text{
-
     width: 600px;
     height: 350px;
     display: inline-block;
-    background-color: aqua;
     float: right ;
 }
 
 .why-right > img{
     height: 400px;
     width: 513px;
+    margin-top: 220px;
+    margin-left: 10px;
     display: inline-block;
 }
 
 .why-right-text > h3{
-
+    margin-top: 247px;
+    font-size: 50px;
 }
 
 .why-right-text > p{
-
+    margin-top: 64px;
+    line-height: 30px;
+    font-size: 30px;
 }
 
 .clearfix::after {
@@ -236,4 +250,13 @@ header{
 footer{
     height: 176px;
     background-color: #AACE9B;
+    text-align: center;
+}
+
+footer > div{
+ padding-top: 30px;
+}
+
+footer > div > p{
+    margin-top: 10px;
 }

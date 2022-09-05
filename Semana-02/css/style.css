@@ -1,5 +1,5 @@
 main , header{
-    width: 1440px;
+    width: 1288px;
     margin-left: 152px;
 }
 body{
@@ -71,15 +71,66 @@ body{
 }
 
 header{
-    width: 1440px;
-    margin-left: 152px;
-    background-image: url("Semana-02/assets/images/landing-desktop-imgs/img/intro-picture.png");
+    background-image: url("../assets/images/landing-desktop-imgs/img/intro-picture.png");
     background-size: cover;
-    opacity: .2;
+    height: 982px;
 }
 
 #head-rectangle{
-    background-color: red;
+    margin-left: 76px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: aliceblue;
+    background-size: cover;
     width: 481px;
     height: 982px;
+}
+
+#head-rectangle > p{
+    margin-top: 50px;
+}
+
+#who-we-are{     
+    height: 800px;
+}
+
+
+#productivity{
+    height: 840px;
+}
+
+#work{
+    height: 840px;
+    background-color: #D9D9D9;
+}
+
+#leadership{
+    height: 840px;
+
+}
+#decision{
+    height: 840px;
+    background-color: #D9D9D9;
+}
+
+#functionalities{
+    height: 635px;
+}
+
+#functionalities-items{
+    display: inline-block;
+}
+
+#contact{
+    height: 665px;
+}
+
+#list{
+    height: 247px;
+    background-image: url("../assets/images/landing-desktop-imgs/img/list-picture.png");
+    background-image: cover;
+}
+
+footer{
+    height: 176px;
+    background-color: #AACE9B;
 }

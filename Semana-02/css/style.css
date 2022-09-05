@@ -1,9 +1,9 @@
-main , header{
+main , header , footer{
     width: 1288px;
     margin-left: 152px;
 }
 body{
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 #sidebar{
@@ -79,7 +79,7 @@ header{
 #head-rectangle{
     margin-left: 76px;
     background-color: rgba(0, 0, 0, 0.3);
-    color: aliceblue;
+    color: #fff;
     background-size: cover;
     width: 481px;
     height: 982px;
@@ -87,26 +87,114 @@ header{
 
 #head-rectangle > p{
     margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+#head-rectangle > h1 {
+    padding-top: 170px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    display: block;
+}
+
+#head-rectangle > h2 {
+    padding-bottom: 40px;
+    padding-left: 40px;
+    display: block;
 }
 
 #who-we-are{     
     height: 800px;
+    text-align: center;
+    padding: 100px 50px;
 }
 
+#who-we-are > h2{     
+    margin-bottom: 60px;
+}
 
-#productivity{
+#who-blue{
+    color: #373867;
+    margin-bottom: 30px;
+}
+
+#who-green{
+    color:#AACE9B;
+}
+
+/* Why choose us*/
+
+#why-choose-us > h2{
+    height: 100px;
+    text-align: center;
+}
+
+.why-left{
     height: 840px;
 }
+
+.why-left-text{
+
+    width: 600px;
+    height: 350px;
+    display: inline-block;
+    background-color: aqua;
+    float: left ;
+}
+
+.why-left > img{
+    height: 400px;
+    width: 513px;
+    display: inline-block;
+}
+
+.why-left-text > h3{
+
+}
+
+.why-left-text > p{
+
+}
+
+.why-right{
+    height: 840px;
+}
+
+.why-right-text{
+
+    width: 600px;
+    height: 350px;
+    display: inline-block;
+    background-color: aqua;
+    float: right ;
+}
+
+.why-right > img{
+    height: 400px;
+    width: 513px;
+    display: inline-block;
+}
+
+.why-right-text > h3{
+
+}
+
+.why-right-text > p{
+
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 #work{
     height: 840px;
     background-color: #D9D9D9;
 }
 
-#leadership{
-    height: 840px;
-
-}
 #decision{
     height: 840px;
     background-color: #D9D9D9;
@@ -116,8 +204,13 @@ header{
     height: 635px;
 }
 
-#functionalities-items{
+.functionalities-items{
     display: inline-block;
+    padding: 10px;
+}
+
+.functionalities-items > p{
+    width: 380px;
 }
 
 #contact{
@@ -128,6 +221,16 @@ header{
     height: 247px;
     background-image: url("../assets/images/landing-desktop-imgs/img/list-picture.png");
     background-image: cover;
+    
+}
+
+#list-box{
+    margin-left: 365px;
+    padding-top: 80px;
+}
+.list-part{
+    display: inline-block;
+    margin-left: 70px;
 }
 
 footer{

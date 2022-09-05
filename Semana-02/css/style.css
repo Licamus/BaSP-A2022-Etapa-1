@@ -1,31 +1,85 @@
 main , header{
-    width: 1288px;
+    width: 1440px;
     margin-left: 152px;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family:Arial, Helvetica, sans-serif
 }
 
 #sidebar{
     position:fixed;
     width: 152px;
     background-color: white;
+
 }
 
+.logo > a{
+    text-decoration: none;
+    color:#373867 ;
+}
+
+.logo > a > img{
+    margin-top: 20px;
+}
+
+.logo > a > h3{
+    margin-top: 10px;
+}
+
+
+
 .logo{
-    background-color: #373867;
-    opacity: 0.4;
+    background-color: rgba(55, 56, 103, 0.4);
+    display: block;
+    height: 160px;
+    text-align: center;
 }
 
 .sidebar-home{
-    margin-left: 25px;
+    margin-bottom: 15px;
 }
 
 .sidebar-text{
-    height: 20px;
-    margin-top: 60px, auto;
-    border: 2px solid#ccc;
+    display: block;
     padding: 10px;
-    position:relative;
-    top: 10px;
+    width: 100px;
+    margin-left: 30px;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #F33413;
+
+}
+
+.sidebar-text > img{
+    margin-right: 10px;
+}
+
+.sidebar-contact{
+    display: block;
+    padding: 10px;
+    margin-top: 300px;
+    color: #F33413;
+}
+
+.sidebar-text-contact > img{
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.sidebar-contact > h4{
+    text-decoration: underline red;
+}
+
+header{
+    width: 1440px;
+    margin-left: 152px;
+    background-image: url("Semana-02/assets/images/landing-desktop-imgs/img/intro-picture.png");
+    background-size: cover;
+    opacity: .2;
+}
+
+#head-rectangle{
+    background-color: red;
+    width: 481px;
+    height: 982px;
 }

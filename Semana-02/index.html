@@ -13,7 +13,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300
         ;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/d7c9d962f7.js" crossorigin="anonymous"></script>        
+        <script src="https://kit.fontawesome.com/d7c9d962f7.js" crossorigin="anonymous">
+        </script>        
     </head>
     <body>
         <aside id="sidebar">
@@ -25,13 +26,13 @@
             </div>
             <nav class="sidebar-home">
                 <a href="index.html" class="sidebar-text">
-                    <img src="assets/images/landing-desktop-imgs/icons/home.png" alt="home">Home
+                    <i class="fa-solid fa-house"></i>Home
                 </a>
                 <a href="#" class="sidebar-text">
-                    <img src="assets/images/landing-desktop-imgs/icons/person.png" alt="sign up">Sign Up
+                    <i class="fa-solid fa-user"></i>Sign Up
                 </a>
                 <a href="#" class="sidebar-text">
-                    <img src="assets/images/landing-desktop-imgs/icons/person.png" alt="login">Login
+                    <i class="fa-solid fa-user"></i>Login
                 </a>
             </nav>
             <div class="sidebar-contact">
@@ -39,13 +40,13 @@
                     Contact Us
                 </h4>
                 <p class="sidebar-text-contact">
-                    <img src="assets/images/landing-desktop-imgs/icons/message-icon.png">trackgenix@gmail.com
+                    <i class="fa-regular fa-envelope"></i>trackgenix@gmail.com
                 </p>
                 <p class="sidebar-text-contact">
-                    <img src="assets/images/landing-desktop-imgs/icons/call.png">(000) 000-0000
+                    <i class="fa-solid fa-phone"></i>(000) 000-0000
                 </p>
                 <p class="sidebar-text-contact">
-                    <img src="assets/images/landing-desktop-imgs/icons/home-work.png">1234 Somewhere Road #8254 Nashville,TN 00000-0000
+                    <i class="fa-solid fa-building-flag"></i>1234 Somewhere Road #8254 Nashville,TN 00000-0000
                 </p>
             </div>
         </aside>
@@ -217,29 +218,15 @@
                     Contact
                 </h2>
                 <div class="line-subtitle">
-                    
                 </div>
                 <form>
-                    <div>
+                    <div class="box-contact">
                         <label>
                            Name
                         </label>
                         <input type="text" name="name" placeholder="Your Name Here">
                     </div>
-                    <div>
-                        <label>
-                        Email
-                        </label>
-                        <input type="email" name="email" placeholder="Your Email Here">
-                    </div>
-                    <div>
-                        <label>
-                        Message
-                        </label>
-                        <textarea name="message" placeholder="Your Message Here">
-                        </textarea>
-                    </div>
-                    <div>
+                    <div class="box-contact">
                         <label>
                             Contact Area
                         </label>
@@ -258,12 +245,26 @@
                             </option>
                         </select>
                     </div>
-                    <button>
-                        <img src="assets/images/landing-desktop-imgs/icons/message-icon.png">
+                    <div>
+                        <label>
+                        Email
+                        </label>
+                        <input type="email" name="email" placeholder="Your Email Here">
+                    </div>
+                    <div>
+                        <label>
+                        Message
+                        </label>
+                        <textarea name="message" placeholder="Your Message Here">
+                        </textarea>
+                    </div>
+                    
+                    <button class="buttom-message">
+                        <i class="fa-regular fa-envelope"></i>
                         Send Message
                     </button>
-                    <button>
-                        <img src="assets/images/landing-desktop-imgs/icons/cross.png">
+                    <button class="buttom-x">
+                        <i class="fa-solid fa-xmark"></i>
                         Reset
                     </button>
                 </form>

@@ -13,6 +13,18 @@ body{
 
 }
 
+aside i{
+    font-size: 14px;
+    color: #F33413;
+    padding-top: 40px;
+}
+
+aside i:hover{
+    font-size: 14px;
+    color: #373867;
+    padding-top: 40px; 
+}
+
 .logo > a{
     text-decoration: none;
     color:#373867 ;
@@ -37,7 +49,8 @@ body{
 }
 
 .sidebar-home{
-    margin-bottom: 15px;
+    margin-top: 40px;
+    padding-bottom: 50px;
 }
 
 .sidebar-text{
@@ -45,15 +58,17 @@ body{
     padding: 10px;
     width: 100px;
     margin-left: 30px;
-    margin-top: 25px;
+    margin-top: 250px;
     text-decoration: none;
     color: #F33413;
     font-size: 15px;
     font-weight: 500;
     line-height: 18px;
+    display: inline;
 }
 
-.sidebar-text > img{
+
+.sidebar-text > i{
     margin-right: 10px;
 }
 
@@ -69,16 +84,20 @@ body{
     text-align: left;
 }
 
-.sidebar-text-contact > img{
+.sidebar-text-contact {
     margin-right: 10px;
-    margin-top: 30px;
+    margin-top: -10px;
 }
 
+.sidebar-text-contact > i{
+    margin-right: 10px;
+}
 .sidebar-contact > h4{
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
     text-decoration: underline red;
+    
 }
 
 header{
@@ -297,25 +316,78 @@ header{
     height: 665px;
 }
 
+.box-contact{
+   margin-top: 30px;
+   margin-left: 50px;
+   float: left;
+}
+
 #contact form > div > input{
     width: 450px;
     height: 30px;
+    display: block;
 }
+
+
+.buttom-message{
+    height: 40px;
+    width: 200px;
+    margin-top: 200px;
+    margin-left: 100px;
+    display: inline-block;
+    background-color: #AACE9B;
+    font-size: 15px;
+    color: #373867; 
+}
+
+.buttom-x{
+    height: 40px;
+    width: 120px;
+    margin-left: 600px;
+    display: inline-block;
+    background-color: #F33413;
+    font-size: 15px;
+    color: #373867; 
+}
+
 
 #list{
     height: 247px;
     background-image: url("../assets/images/landing-desktop-imgs/img/list-picture.png");
     background-image: cover;
+
     
 }
 
 #list-box{
     margin-left: 365px;
     padding-top: 80px;
+  
 }
+
 .list-part{
     display: inline-block;
     margin-left: 70px;
+}
+
+.list-part > ol > li > a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #373867;
+}
+
+.list-part > h3{
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #373867;
+}
+
+.list-part > h3:hover{
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #F33413;
 }
 
 footer{

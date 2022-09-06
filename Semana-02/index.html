@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/icons/logo-rr.ico">
         <link rel="stylesheet" type="text/css" href="css/reset.css">           
         <link rel="stylesheet" type="text/css" href="css/style.css">   
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,45 +221,47 @@
                 <div class="line-subtitle">
                 </div>
                 <form>
-                    <div class="box-contact">
-                        <label>
-                           Name
-                        </label>
-                        <input type="text" name="name" placeholder="Your Name Here">
+                    <div id="contact-main-container">
+                        <div id="name-container">
+                            <div class="box-contact">
+                                <label>
+                                Name
+                                </label>
+                                <input type="text" name="name" placeholder="Your Name Here">
+                            </div>
+                            <div class="box-contact">
+                                <label>
+                                Email
+                                </label>
+                                <input type="email" name="email" placeholder="Your Email Here">
+                            </div>
+                        </div>
+                        <div id="contact-container">
+                            <div class="box-contact">
+                                <select name="contact-area">
+                                    <option value="" disabled selected hidden>
+                                        Contact Area
+                                    </option>
+                                    <option value="human-resources">
+                                        Human Resources
+                                    </option>
+                                    <option value="systems">
+                                        Systems
+                                    </option>
+                                    <option value="commercialization">
+                                        Commercialization
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="box-contact">
-                        <label>
-                            Contact Area
-                        </label>
-                        <select name="contact-area">
-                            <option value="" disabled selected hidden>
-                                Contact Area
-                            </option>
-                            <option value="human-resources">
-                                Human Resources
-                            </option>
-                            <option value="systems">
-                                Systems
-                            </option>
-                            <option value="commercialization">
-                                Commercialization
-                            </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>
-                        Email
-                        </label>
-                        <input type="email" name="email" placeholder="Your Email Here">
-                    </div>
-                    <div>
+                    <div class="box-message">
                         <label>
                         Message
                         </label>
                         <textarea name="message" placeholder="Your Message Here">
                         </textarea>
-                    </div>
-                    
+                    </div>  
                     <button class="buttom-message">
                         <i class="fa-regular fa-envelope"></i>
                         Send Message

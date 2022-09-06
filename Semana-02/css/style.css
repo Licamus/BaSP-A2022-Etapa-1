@@ -316,38 +316,122 @@ header{
     height: 665px;
 }
 
-.box-contact{
-   margin-top: 30px;
-   margin-left: 50px;
-   float: left;
+#contact-main-container{
+    display: inline-block;
+    width: 1200px;
+    height: 250px;
+    margin-top: -50px;
 }
 
-#contact form > div > input{
+.box-contact > select:focus{
+    color: #F33413;
+    border: 2px solid #F33413;
+}
+
+.box-contact > input:focus{
+    color: #F33413;
+    border: 2px solid #F33413;
+    outline: #F33413;
+}
+
+#contact-container{
+    width: 550px;
+    height: 200px;
+    margin-top: 17px;
+    float: right;;
+}
+
+#name-container{
+    width: 550px;
+    height: 200px;
+    float: left;
+}
+
+.box-contact > select{
+    width: 450px;
+    height: 36px;
+}
+
+.box-contact > input{
     width: 450px;
     height: 30px;
-    display: block;
 }
 
+.box-contact > label{
+    display: block;
+    margin-bottom: 7px;
+}
+
+
+.box-contact{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.box-message{
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-top: -40px;
+}
+
+.box-message > label{
+    display: block;
+    margin-bottom: 25px;
+}
+
+.box-message > textarea{
+    width: 1100px;
+    height: 150px;
+}
 
 .buttom-message{
     height: 40px;
     width: 200px;
-    margin-top: 200px;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-top: 30px;
     display: inline-block;
     background-color: #AACE9B;
     font-size: 15px;
     color: #373867; 
+    border: none;
+    border-radius: 7px;
+}
+
+.buttom-message:hover{
+    height: 40px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 15px;
+    color: #373867; 
+    border: 2px solid #286276;
+    border-radius: 7px;
 }
 
 .buttom-x{
     height: 40px;
     width: 120px;
-    margin-left: 600px;
+    margin-left: 782px;
     display: inline-block;
     background-color: #F33413;
     font-size: 15px;
     color: #373867; 
+    border: none;
+    border-radius: 7px;
+}
+
+.buttom-x:hover{
+    height: 40px;
+    width: 120px;
+    margin-left: 782px;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 15px;
+    color: #373867; 
+    border: 2px solid #286276;
+    border-radius: 7px;
 }
 
 

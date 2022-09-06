@@ -24,8 +24,9 @@ body{
 
 .logo > a > h3{
     margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
 }
-
 
 
 .logo{
@@ -47,7 +48,9 @@ body{
     margin-top: 25px;
     text-decoration: none;
     color: #F33413;
-
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
 }
 
 .sidebar-text > img{
@@ -55,10 +58,15 @@ body{
 }
 
 .sidebar-contact{
+    width: 140px;
     display: block;
     padding: 10px;
-    margin-top: 300px;
+    margin-top: 250px;
     color: #F33413;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-align: left;
 }
 
 .sidebar-text-contact > img{
@@ -67,6 +75,9 @@ body{
 }
 
 .sidebar-contact > h4{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
     text-decoration: underline red;
 }
 
@@ -116,10 +127,19 @@ header{
     line-height: 30px;
 }
 
-#who-we-are > h2{     
-    margin-bottom: 60px;
+.subtitle{     
     font-size: 40px;
 }
+
+.line-subtitle {
+    border-top: 7px solid #D9D9D9;
+    height: 2px;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 60px
+  }
 
 #who-blue{
     color: #373867;
@@ -137,12 +157,34 @@ header{
 /* Why choose us*/
 
 #why-choose-us > h2{
-    height: 100px;
     text-align: center;
 }
 
 .why-left{
     height: 840px;
+}
+
+.line-why-right{
+    border-top: 4px solid #fff;
+    height: 2px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    position: relative;
+    right: 55px;
+}
+
+.line-why-left{
+    border-top: 4px solid #286276;
+    height: 2px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 .why-left-text{
@@ -151,19 +193,20 @@ header{
     height: 350px;
     display: inline-block;
     float: left ;
+    margin-left: 120px;
 }
 
 .why-left > img{
     height: 400px;
     width: 513px;
     margin-top: 220px;
-    margin-left: 100px;
     display: inline-block;
 }
 
 .why-left-text > h3{
     margin-top: 247px;
     font-size: 50px;
+    
 }
 
 .why-left-text > p{
@@ -188,8 +231,9 @@ header{
     height: 400px;
     width: 513px;
     margin-top: 220px;
-    margin-left: 10px;
+    margin-left: 120px;
     display: inline-block;
+
 }
 
 .why-right-text > h3{
@@ -221,19 +265,41 @@ header{
 
 #functionalities{
     height: 635px;
+    background-color: #AACE9B;
 }
 
 .functionalities-items{
     display: inline-block;
-    padding: 10px;
+    padding-left: 100px;
+}
+
+.functionalities > h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    text-align: center;
 }
 
 .functionalities-items > p{
     width: 380px;
+    height: 150px;
+
 }
 
 #contact{
     height: 665px;
+}
+
+#contact > h2{
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#contact form > div > input{
+    width: 450px;
+    height: 30px;
 }
 
 #list{
@@ -265,3 +331,4 @@ footer > div{
 footer > div > p{
     margin-top: 10px;
 }
+

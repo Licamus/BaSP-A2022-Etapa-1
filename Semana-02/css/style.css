@@ -328,7 +328,21 @@ footer > div{
  padding-top: 30px;
 }
 
+
 footer > div > p{
     margin-top: 10px;
 }
 
+footer > div > a{
+    font-size: 40px;
+    color: #fff; 
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer > div > a:hover{
+    font-size: 40px;
+    color: #F33413; 
+    text-decoration: none;
+    padding: 10px;
+}

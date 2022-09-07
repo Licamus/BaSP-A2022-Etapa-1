@@ -39,7 +39,6 @@ aside i:hover{
     font-weight: 400;
 }
 
-
 .logo{
     height: 160px;
     background-color: rgba(55, 56, 103, 0.4);
@@ -371,6 +370,8 @@ header{
 .box-contact > label{
     margin-bottom: 7px;
     display: block;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .box-contact{
@@ -387,6 +388,8 @@ header{
 .box-message > label{
     margin-bottom: 25px;
     display: block;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .box-message > textarea{

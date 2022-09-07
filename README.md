@@ -20,4 +20,7 @@ Me and my coworker (Ramiro Amadeo) create the landing desktop interface with Fig
 I create the HTML code for the Landing Desktop page. 
 I also create this readme.
 ### Week 02 CSS
-next week...
+I create the CSS code for the Landing Desktop page.
+I modified the HTML code for a better CSS compatibility.
+### Week 03 CSS
+Next week...

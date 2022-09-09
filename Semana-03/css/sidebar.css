@@ -1,0 +1,88 @@
+#sidebar{
+    position:fixed;
+    display: flex;
+    width: 10%;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+aside i{
+    font-size: 14px;
+    color: #F33413;
+}
+
+aside i:hover{
+    font-size: 14px;
+    color: #373867;
+}
+
+.logo > a{
+    text-decoration: none;
+    color:#373867 ;
+}
+
+.logo > a > img{
+    display:flex;
+    flex-basis: 50%;
+    justify-content: center;
+}
+
+.logo > a > h3{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.logo{
+    display: flex;
+    flex-basis: 100%;
+    flex-shrink: 1;
+    height: 160px;
+    background-color: rgba(55, 56, 103, 0.4);
+}
+
+.sidebar-home{
+    display: flex;
+    flex-flow: wrap row ;
+    justify-content: center;
+}
+
+.sidebar-text{ 
+    flex-basis: 60%;
+    text-decoration: none;
+    color: #F33413;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.sidebar-text > i{
+    margin-right: 10%;
+}
+
+.sidebar-contact{
+    width: 140px;
+    padding: 10px;
+    margin-top: 250px;
+    display: block;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    color: #F33413;
+}
+
+.sidebar-text-contact {
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.sidebar-text-contact > i{
+    margin-right: 10px;
+}
+.sidebar-contact > h4{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration: underline red;
+}

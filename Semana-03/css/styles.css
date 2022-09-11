@@ -6,46 +6,6 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-header{
-    height: 982px;
-    background-image: url("../assets/images/landing-desktop-imgs/img/intro-picture.png");
-    background-size: cover;
-}
-
-#head-rectangle{
-    margin-left: 76px;
-    width: 481px;
-    height: 982px;
-    box-sizing: content-box;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-}
-
-#head-rectangle > p{
-    margin-top: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 30px;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-#head-rectangle > h1 {
-    padding-top: 170px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    display: block;
-    font-size: 40px;
-}
-
-#head-rectangle > h2 {
-    padding-bottom: 40px;
-    padding-left: 40px;
-    display: block;
-    font-size: 20px;
-}
-
 #who-we-are{     
     height: 800px;
     padding: 100px 50px;

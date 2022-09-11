@@ -1,0 +1,28 @@
+
+footer{
+    height: 176px;
+    background-color: #AACE9B;
+    text-align: center;
+}
+
+footer > div{
+    padding-top: 30px;
+}
+
+footer > div > p{
+    margin-top: 10px;
+}
+
+footer > div > a{
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff; 
+}
+
+footer > div > a:hover{
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;  
+    color: #F33413; 
+}

@@ -21,23 +21,23 @@ aside i:hover{
     color: #373867;
 }
 
-.logo > a{
+#logo > a{
     text-decoration: none;
     color:#373867 ;
 }
 
-.logo > a > p{
+#logo > a > p{
     font-size: 20px;
     font-weight: 400;
     width: 80%;
 }
 
-.logo > a > img{
+#logo > a > img{
     width: 80%;
     height: 80%;
 }
 
-.logo{
+#logo{
     display: flex;
     flex-basis: 100%;
     height: 20%;
@@ -46,7 +46,7 @@ aside i:hover{
     align-items: center;
 }
 
-.sidebar-home{
+#sidebar-home{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -57,7 +57,7 @@ aside i:hover{
     background-color: #fff;
 }
 
-.sidebar-home a{ 
+#sidebar-home a{ 
     padding-top: 20%;
     text-decoration: none;
     color: #F33413;
@@ -66,12 +66,12 @@ aside i:hover{
     line-height: 18px;
 }
 
-.sidebar-home a i{ 
+#sidebar-home a i{ 
     padding-right: 10px;
 }
 
 
-.sidebar-contact{
+#sidebar-contact{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

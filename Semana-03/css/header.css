@@ -27,7 +27,7 @@ header{
     color: rgba(255, 255, 255, 0.75);
 }
 
-#head-rectangle h1 {
+h1 {
     width:  100%;
     font-size: 40px;
     padding-bottom: 6px;

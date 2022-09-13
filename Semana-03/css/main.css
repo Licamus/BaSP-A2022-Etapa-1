@@ -1,9 +1,11 @@
-/* Who we are*/
+main {
+    display: flex;
+    flex-direction: column;
+}
 
 #who-we-are{     
     display: flex;
     flex-direction: column;
-    height: 90%;
     padding: 5%;
     justify-content: center;
     text-align: center;
@@ -39,7 +41,7 @@
     color:#AACE9B;
 }
 
-/* Why left*/
+/* Who we are
 
 .why-left{
     display: flex;
@@ -78,7 +80,7 @@
     font-size: 30px;
 }
 
-/* Why right*/ 
+
 
 .why-right{
     display: flex;
@@ -324,3 +326,5 @@
     font-size: 20px;
     color: #F33413;
 }
+*/
+/* Why right*/ 

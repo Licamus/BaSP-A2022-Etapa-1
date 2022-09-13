@@ -1,8 +1,10 @@
 
-/*footer{
-    height: 176px;
+footer{
+    display: flex;
+    flex-direction: column;
     background-color: #AACE9B;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 footer > div{
@@ -10,7 +12,8 @@ footer > div{
 }
 
 footer > div > p{
-    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 footer > div > a{
@@ -18,13 +21,13 @@ footer > div > a{
     font-size: 40px;
     text-decoration: none;
     color: #fff; 
+    padding-left: 20px;
 }
 
 footer > div > a:hover{
-    padding: 10px;
     font-size: 40px;
     text-decoration: none;  
     color: #F33413; 
 }
- */
+
  

@@ -1,22 +1,26 @@
+/* width, height, margin, padding, top, left, etc. Luego las reglas de background y border. A continuación las reglas de texto (font-size, text-shadow, etc). Por último las demás reglas. Revisar por ejemplo el display que deberia ir al principio del bloque, y las reglas de border que deberían ir antes que la de texto */
+
+
 main {
     display: flex;
     flex-direction: column;
 }
 
+/* Who we are */
 #who-we-are{     
     display: flex;
     flex-direction: column;
-    padding: 5%;
     justify-content: center;
+    padding: 5%;
     text-align: center;
     line-height: 30px;
 }
 
 .subtitle{     
+    padding-top: 2%;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    padding-top: 2%;
 }
 
 .line-subtitle {
@@ -41,95 +45,121 @@ main {
     color:#AACE9B;
 }
 
-/* Who we are
+/* Why Left*/
+
 
 .why-left{
     display: flex;
-    height: 840px;
     justify-content: center;
+    align-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-right: 10%;
+    flex: 0 1 auto;
 }
 
 .line-why-left{
-    border-top: 4px solid #286276;
-    height: 2px;
     max-width: 100%;
+    height: 2px;
+    border-top: 4px solid #286276;
 }
 
 .why-left-text{
-
-    width: 600px;
-    height: 350px;
     margin-left: 10%;
-}
-
-.why-left > img{
-    height: 400px;
-    width: 513px;
-    margin-top: 220px;
+    flex: 0 1 50%;;
 }
 
 .why-left-text > h3{
-    margin-top: 247px;
     font-size: 50px;
-    
 }
 
 .why-left-text > p{
-    margin-top: 64px;
+    padding-right: 5%;
+    padding-top: 60px;
     line-height: 30px;
     font-size: 30px;
 }
 
-
+/* Why Left */
 
 .why-right{
     display: flex;
-    height: 840px;
-    justify-content: center;
+    flex-direction: row;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 10%;
     background-color: #D9D9D9;
 }
 
 .line-why-right{
     height: 2px;
     max-width: 100%;
-    justify-content: end;
     border-top: 4px solid #fff;
 }
 
-.why-right-text{
-    width: 600px;
-    height: 350px; 
-    
+.why-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 0 0.2 30%;
+    min-height: 400px;
 }
 
-.why-right > img{
-    height: 400px;
-    width: 513px;
-    margin-top: 220px;
-    margin-left: 5%;
+#why-image-productivity{
+    background-image: url("../assets/images/landing-desktop-imgs/img/productivity-boster.png") ;
+    background-size: cover;
+}
+
+#why-image-traceability{
+    background-image: url("../assets/images/landing-desktop-imgs/img/work-traceability.png") ;
+    background-size: cover;
+}
+
+#why-image-leadership{
+    background-image: url("../assets/images/landing-desktop-imgs/img/leadership.png") ;
+    background-size: cover;
+}
+
+#why-image-decision{
+    background-image: url("../assets/images/landing-desktop-imgs/img/decision-making.png") ;
+    background-size: cover;
+}
+
+
+.why-right-text{
+    flex: 0 1 50%;
 }
 
 .why-right-text > h3{
-    margin-top: 247px;
-    margin-left: 5%;
+    padding-left: 5%;
     font-size: 50px;
 }
 
 .why-right-text > p{
-    margin-top: 64px;
-    margin-left: 5%;
+    padding-left: 5%;
+    padding-top: 60px;
     line-height: 30px;
     font-size: 30px;
 }
 
+/* Functionalities */
+
 #functionalities{
-    height: 635px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.functionalities-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding-top: 150px;
 }
 
 .functionalities-items{
-    display: inline-block;
-    padding-left: 100px;
-    margin-bottom: 80px;
+    display: flex;
 }
 
 .functionalities-items > i{
@@ -147,10 +177,11 @@ main {
 
 
 .func-text > h3{
+    padding-bottom: 10px;
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-    padding-bottom: 10px;
+    
 }
 
 .func-text > p{
@@ -160,21 +191,22 @@ main {
 }
 
 .func-text{
-    width: 360px;
-    height: 150px;
-    padding-left: 20px;
-    display: inline-block;
+   padding-left: 20px;
+   padding-right: 20px;
 }
 
+/* Conctact*/
+
 #contact{
-    height: 665px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
 }
 
 #contact-main-container{ 
-    width: 1200px;
-    height: 250px;
-    margin-top: -50px;
-    display: inline-block;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .box-contact > select:focus{
@@ -189,35 +221,30 @@ main {
 }
 
 #contact-container{
-    width: 550px;
-    height: 200px;
-    margin-top: 17px;
-    float: right;
+    background-color: #373867;
+    flex-basis: 33%;
 }
 
 #name-container{
-    width: 550px;
-    height: 200px;
-    float: left;
+    background-color: #AACE9B;
+    flex-basis: 33%;
 }
 
 .box-contact > select{
-    width: 450px;
-    height: 36px;
+    width: 100%;
+    min-height: 36px;
 }
 
 .box-contact > input{
-    width: 450px;
+    width: 100%;
     height: 30px;
 }
 
 .box-contact > label{
-    margin-bottom: 7px;
-    display: block;
     font-size: 14px;
     font-weight: 500;
 }
-
+/*
 .box-contact{
     margin-top: 30px;
     margin-left: 50px;

@@ -5,10 +5,18 @@ header{
     background-size: cover;
 }
 
+#menu-icon{
+    display: none;
+}
+
+.fa-bars{
+    display: none;
+}
+
 #head-rectangle{
     display: flex;
     margin-left: 76px;
-    width: 480px;
+    width: 400px;
     height: 100%;
     box-sizing: content-box;
     background-size: cover;
@@ -43,7 +51,43 @@ h1 {
 
 #line-header{
     height: 2px;
-    width: 400px;
+    width: 70%;
     border-top: 2.5px solid #AACE9B;
     padding-left: 20px;
+}
+
+
+@media (max-width: 480px) {
+
+    #head-rectangle{   
+        width: 100%;
+        margin-left:0;
+    }
+    
+    #menu-icon{
+        display: flex;
+    }
+    .fa-bars{
+        padding: 40px;
+        font-size: 30px;
+        color: #fff;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    #head-rectangle{   
+        width: 100%;
+        margin-left:0;
+    }
+
+    #menu-icon{
+        display: flex;
+    }
+
+    .fa-bars{
+        padding: 40px;
+        font-size: 30px;
+        color: #fff;
+    }
 }

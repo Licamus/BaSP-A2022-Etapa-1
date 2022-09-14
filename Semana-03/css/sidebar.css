@@ -11,6 +11,7 @@
     flex-wrap: wrap;
 }
 
+
 aside i{
     font-size: 14px;
     color: #F33413;
@@ -101,3 +102,15 @@ aside i:hover{
 .sidebar-text-contact i{
     padding-right: 6%;
 }
+
+@media (max-width: 480px) {
+    #sidebar{
+        display: none;
+    } 
+}
+
+@media (max-width: 1023px) {
+    #sidebar{
+        display: none;
+    }
+} 

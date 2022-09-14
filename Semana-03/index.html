@@ -56,6 +56,9 @@
             </div>
         </aside>
         <header>
+            <div id="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div id="head-rectangle">
                 <h1>
                     Trackgenix
@@ -229,7 +232,7 @@
                 </h2>
                 <div class="line-subtitle">
                 </div>
-                <form>
+                <form id="form">
                     <div id="contact-main-container">
                         <div id="name-container">
                             <div class="box-contact">
@@ -264,21 +267,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box-message">
+                    <div id="box-message">
                         <label>
                         Message
                         </label>
-                        <textarea name="message" placeholder="Your Message Here">
-                        </textarea>
+                        <div id="box-message-text-area">
+                            <textarea name="message" placeholder="Your Message Here">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div id="buttom-box">
+                        <button class="buttom-message">
+                            <i class="fa-regular fa-envelope"></i>
+                            Send Message
+                        </button>
+                        <button class="buttom-x">
+                            <i class="fa-solid fa-xmark"></i>
+                            Reset
+                        </button>
                     </div>  
-                    <button class="buttom-message">
-                        <i class="fa-regular fa-envelope"></i>
-                        Send Message
-                    </button>
-                    <button class="buttom-x">
-                        <i class="fa-solid fa-xmark"></i>
-                        Reset
-                    </button>
                 </form>
             </section>  
             <section id="list">

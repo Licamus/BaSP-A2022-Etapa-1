@@ -1,15 +1,10 @@
-/* width, height, margin, padding, top, left, etc. Luego las reglas de background y border. A continuación las reglas de texto (font-size, text-shadow, etc). Por último las demás reglas. Revisar por ejemplo el display que deberia ir al principio del bloque, y las reglas de border que deberían ir antes que la de texto 
-
-    height: fit-content;
-*/
-
 main {
     display: flex;
     flex-direction: column;
 }
 
 /* Who we are */
-#who-we-are{     
+#who-we-are{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,11 +13,11 @@ main {
     line-height: 30px;
 }
 
-.subtitle{     
+.subtitle{
     padding-top: 2%;
+    text-align: center;
     font-size: 40px;
     font-weight: 700;
-    text-align: center;
 }
 
 .line-subtitle {
@@ -148,6 +143,7 @@ main {
     display: flex;
     flex-direction: column;
     padding-bottom: 100px;
+    padding-left: 5%;
 }
 
 .functionalities-box{
@@ -164,14 +160,14 @@ main {
 
 .functionalities-items > i{
     padding: 40px;
-    font-size: 50px;
     border: black solid 4px;
+    font-size: 50px;
 }
 
 .functionalities-items:hover > i{
     padding: 40px;
-    font-size: 50px;
     border: #F33413 solid 4px;
+    font-size: 50px;
     color: #F33413;
 }
 
@@ -181,7 +177,6 @@ main {
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
-    
 }
 
 .func-text > p{
@@ -195,7 +190,7 @@ main {
    padding-right: 20px;
 }
 
-/* Conctact*/
+/* Contact*/
 
 #contact{
     display: flex;
@@ -210,21 +205,21 @@ main {
     align-items: center;
 }
 
-#contact-main-container{ 
+#contact-main-container{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
 
 .box-contact > select:focus{
-    color: #F33413;
     border: 2px solid #F33413;
+    color: #F33413;
 }
 
 .box-contact > input:focus{
-    color: #F33413;
     border: 2px solid #F33413;
     outline: #F33413;
+    color: #F33413;
 }
 
 #contact-container{
@@ -290,15 +285,14 @@ main {
     width: 78%;
 }
 
-
 .buttom-message{
     height: 40px;
     width: 200px;
     background-color: #AACE9B;
-    font-size: 15px;
-    color: #373867; 
     border: none;
     border-radius: 7px;
+    font-size: 15px;
+    color: #373867;
 }
 
 .buttom-message:hover{
@@ -308,9 +302,8 @@ main {
     border-radius: 7px;
     background-color: #fff;
     font-size: 15px;
-    color: #373867; 
+    color: #373867;
 }
-
 
 .buttom-x{
     height: 40px;
@@ -329,10 +322,10 @@ main {
     border-radius: 7px;
     background-color: #fff;
     font-size: 15px;
-    color: #373867; 
+    color: #373867;
 }
 
-/* Lista Ordenada */
+/* Order List */
 
 #list{
     background-image: url("../assets/images/landing-desktop-imgs/img/list-picture.png");
@@ -377,7 +370,6 @@ main {
 
 
 @media (max-width: 480px) {
-
     .why-left{
         flex-direction: column;
         padding-right: 5%;
@@ -412,7 +404,7 @@ main {
         padding-left: 5%;
     }
 
-    #contact-main-container{ 
+    #contact-main-container{
         flex-direction: column;
         width: 80%;
     }
@@ -434,11 +426,9 @@ main {
     .list-part:first-child{
         padding-left: 20px;
     }
-
   }
 
 @media (max-width: 1023px) {
-
     .why-left{
         flex-direction: column;
         padding-left: 10%;
@@ -472,9 +462,8 @@ main {
         padding-left: 5%;
     }
 
-    #contact-main-container{ 
+    #contact-main-container{
         flex-direction: column;
         width: 80%;
     }
-    
 }

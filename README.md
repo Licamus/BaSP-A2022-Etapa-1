@@ -17,7 +17,7 @@
 ### Week 00 Figma
 Me and my coworker (Ramiro Amadeo) create the landing desktop interface with Figma.
 ### Week 01 HTML
-I create the HTML code for the Landing Desktop page. 
+I create the HTML code for the Landing Desktop page.
 I also create this readme.
 ### Week 02 CSS
 I create the CSS code for the Landing Desktop page.

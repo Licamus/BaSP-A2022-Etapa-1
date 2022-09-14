@@ -1,7 +1,7 @@
 main , header , footer{
     width: 90%;
-    margin-left: 10%;
     min-height: 12vh;
+    margin-left: 10%;
 }
 body{
     font-family: 'Roboto', sans-serif;

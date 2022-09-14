@@ -23,4 +23,7 @@ I also create this readme.
 I create the CSS code for the Landing Desktop page.
 I modified the HTML code for a better CSS compatibility.
 ### Week 03 CSS
+I create a new Responsive CSS code, and modified the HTML for compatibility.
+I tried to use mostly flexbox, and in last instance Media Queries.
+### Week 04 XXX
 Next week...

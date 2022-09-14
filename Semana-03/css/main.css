@@ -56,7 +56,6 @@ main {
     padding-top: 150px;
     padding-bottom: 150px;
     padding-right: 10%;
-    flex: 0 1 auto;
 }
 
 .line-why-left{
@@ -102,7 +101,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex: 0 0.2 30%;
+    flex: 0 1 30%;
     min-height: 400px;
 }
 
@@ -270,7 +269,6 @@ main {
 }
 
 #box-message-text-area{
-    
     justify-content: center;
     align-content: center;
 }
@@ -334,9 +332,12 @@ main {
     color: #373867; 
 }
 
+/* Lista Ordenada */
+
 #list{
     background-image: url("../assets/images/landing-desktop-imgs/img/list-picture.png");
     background-size: cover;
+    height: fit-content;
 }
 
 #list-box{
@@ -347,7 +348,7 @@ main {
 }
 
 .list-part{
-    padding-left: 150px;
+    padding-left: 10%;
 }
 
 .list-part:first-child{
@@ -376,9 +377,104 @@ main {
 
 
 @media (max-width: 480px) {
+
+    .why-left{
+        flex-direction: column;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .why-left-text > p{
+        padding-right: 0;
+    }
+
+    .why-right{
+        flex-direction: column-reverse;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .why-left-text > p{
+        padding-left: 0;
+    }
+
+    .why-image{
+        margin-top: 20px;
+    }
+
+    .functionalities-box{
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    .functionalities-items{
+        padding-top: 70px;
+        padding-left: 5%;
+    }
+
+    #contact-main-container{ 
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #list-box{
+        flex-direction: column;
+    }
     
+    .list-part{
+        padding-left:0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .list-part:nth-child(2){
+        padding-left: 20px;
+    }
+    
+    .list-part:first-child{
+        padding-left: 20px;
+    }
+
   }
 
 @media (max-width: 1023px) {
+
+    .why-left{
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .why-left-text > p{
+        padding-right: 0;
+    }
+
+    .why-right{
+        flex-direction: column-reverse;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .why-left-text > p{
+        padding-left: 0;
+    }
+
+    .why-image{
+        margin-top: 20px;
+    }
+
+    .functionalities-box{
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+     .functionalities-items{
+        padding-top: 70px;
+        padding-left: 5%;
+    }
+
+    #contact-main-container{ 
+        flex-direction: column;
+        width: 80%;
+    }
     
 }

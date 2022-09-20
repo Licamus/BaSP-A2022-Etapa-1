@@ -1,9 +1,9 @@
 footer{
     display: flex;
     flex-direction: column;
-    background-color: #AACE9B;
     justify-content: space-around;
     align-items: center;
+    background-color: #AACE9B;
 }
 
 footer > div:first-child{

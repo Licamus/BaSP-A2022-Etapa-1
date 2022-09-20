@@ -15,11 +15,12 @@ header{
 }
 
 .fa-bars{
-    padding: 40px;
+    padding: 15px;
+    border: #F33413 solid 2px;
+    border-radius: 10px;
     font-size: 30px;
     color: #F33413;
 }
-
 
 #head-rectangle{
     display: flex;

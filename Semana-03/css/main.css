@@ -7,17 +7,9 @@ main {
 #who-we-are{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 5%;
     text-align: center;
-    line-height: 30px;
-}
-
-.subtitle{
-    padding-top: 2%;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 700;
+    padding: 2vh;
+    line-height: 15px;
 }
 
 .line-subtitle {
@@ -26,19 +18,19 @@ main {
     height: 2px;
     max-width: 80%;
     border-top: 7px solid #D9D9D9;
-  }
+}
 
 #who-blue{
-    margin-top: 5%;
-    font-size: 30px;
-    line-height: 35px;
+    padding-top: 5vh;
+    font-size: 15px;
+    line-height: 15px;
     color: #373867;
 }
 
 #who-green{
-    margin-top: 5%;
-    font-size: 30px;
-    line-height: 35px;
+    padding-top: 5vh;
+    font-size: 15px;
+    line-height: 15px;
     color:#AACE9B;
 }
 
@@ -62,10 +54,6 @@ main {
 .why-left-text{
     margin-left: 10%;
     flex: 0 1 50%;;
-}
-
-.why-left-text > h3{
-    font-size: 50px;
 }
 
 .why-left-text > p{
@@ -125,11 +113,6 @@ main {
     flex: 0 1 50%;
 }
 
-.why-right-text > h3{
-    padding-left: 5%;
-    font-size: 50px;
-}
-
 .why-right-text > p{
     padding-left: 5%;
     padding-top: 60px;
@@ -158,25 +141,24 @@ main {
     display: flex;
 }
 
-.functionalities-items > i{
-    padding: 40px;
+.functionalities-items > div:first-child{
+    width: 125px;
+    height: 125px;
     border: black solid 4px;
-    font-size: 50px;
+    transform: rotate(45deg);
 }
 
-.functionalities-items:hover > i{
+.functionalities-items > div > i{
     padding: 40px;
-    border: #F33413 solid 4px;
     font-size: 50px;
+    transform: rotate(-45deg);
+}
+
+.functionalities-items:hover > div:first-child{
+    border: #F33413 solid 4px;
     color: #F33413;
 }
 
-.func-text > h3{
-    padding-bottom: 10px;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 35px;
-}
 
 .func-text > p{
     font-size: 20px;
@@ -185,8 +167,10 @@ main {
 }
 
 .func-text{
-   padding-left: 20px;
-   padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* Contact*/
@@ -353,22 +337,24 @@ main {
     color: #373867;
 }
 
-.list-part > h3{
-    padding-bottom: 20px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: #373867;
-}
-
-.list-part > h3:hover{
-    text-decoration: none;
-    font-size: 20px;
-    color: #F33413;
-}
 
 
-@media (max-width: 480px) {
+ @media (min-width: 480px) {
+    #who-we-are{
+        line-height: 20px;
+    }
+    
+    #who-blue{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    
+    #who-green{
+        font-size: 20px;
+        line-height: 25px;
+    }
+ }
+    /*
     .why-left{
         flex-direction: column;
         padding-right: 5%;
@@ -426,8 +412,27 @@ main {
         padding-left: 20px;
     }
   }
+*/
+@media (min-width: 1023px) {
 
-@media (max-width: 1023px) {
+    #who-we-are{
+        line-height: 30px;
+    }
+    
+    #who-blue{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+    #who-green{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    /* Who we are */
+}
+
+/*hola*/ /*
+
     .why-left{
         flex-direction: column;
         padding-left: 10%;
@@ -465,4 +470,4 @@ main {
         flex-direction: column;
         width: 80%;
     }
-}
+  */

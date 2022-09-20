@@ -5,18 +5,21 @@ header{
     background-size: cover;
 }
 
-h1 {
-    display: flex;
-    font-size: 40px;
+#head-rectangle{
+    width: 100%;
 }
 
 #menu-icon{
-    display: none;
+    display: flex;
+    position: fixed;
 }
 
 .fa-bars{
-    display: none;
+    padding: 40px;
+    font-size: 30px;
+    color: #F33413;
 }
+
 
 #head-rectangle{
     display: flex;
@@ -24,13 +27,12 @@ h1 {
     justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap;
-    flex-basis: 400px;
-    margin-left: 80px;
     padding-left: 15px;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
 }
+
 #head-rectangle > div{
     display: flex;
     flex-wrap: wrap;
@@ -47,47 +49,33 @@ h1 {
 }
 
 #head-rectangle h2 {
+    padding-top: 0;
+    text-align: left;
     font-size: 20px;
+    font-weight: 200;
 }
 
 #line-header{
+    display: flex;
     height: 2px;
     width: 70%;
     border-top: 2.5px solid #AACE9B;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
     #head-rectangle{
-        width: 100%;
-        margin-left:0;
-    }
-
-    #menu-icon{
-        display: flex;
-        position: fixed;
-    }
-
-    .fa-bars{
-        padding: 40px;
-        font-size: 30px;
-        color: #fff;
-    }
+        flex-basis: 400px;
+        margin-left: 80px;
+        padding-left: 15px;
+        }
 }
 
-@media (max-width: 1023px) {
-    #head-rectangle{
-        width: 100%;
-        margin-left:0;
-    }
-
+@media (min-width: 1024px) {
     #menu-icon{
-        display: flex;
-        position: fixed;
+        display: none;
     }
 
     .fa-bars{
-        padding: 40px;
-        font-size: 30px;
-        color: #F33413;
+        display: none;
     }
 }

@@ -125,33 +125,21 @@ main {
 #functionalities{
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
-    padding-left: 5%;
-}
-
-.functionalities-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    padding-top: 150px;
+    padding:5vh;
 }
 
 .functionalities-items{
     display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-left: 5%;
 }
 
 .functionalities-items > div:first-child{
-    width: 125px;
-    height: 125px;
+    width: 70px;
+    height: 70px;
     border: black solid 4px;
     transform: rotate(45deg);
-}
-
-.functionalities-items > div > i{
-    padding: 40px;
-    font-size: 50px;
-    transform: rotate(-45deg);
 }
 
 .functionalities-items:hover > div:first-child{
@@ -159,18 +147,27 @@ main {
     color: #F33413;
 }
 
+.functionalities-items > div > i{
+    padding: 20px;
+    font-size: 30px;
+    transform: rotate(-45deg);
+}
 
 .func-text > p{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 23px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
 }
 
 .func-text{
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 3vh;
+}
+
+.functionalities-box{
+    flex-direction: column;
+    padding-top: 0px;
 }
 
 /* Contact*/
@@ -178,7 +175,7 @@ main {
 #contact{
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
+    padding: 5vh;
 }
 
 #form{
@@ -189,20 +186,8 @@ main {
 }
 
 #contact-main-container{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.box-contact > select:focus{
-    border: 2px solid #F33413;
-    color: #F33413;
-}
-
-.box-contact > input:focus{
-    border: 2px solid #F33413;
-    outline: #F33413;
-    color: #F33413;
+    flex-direction: column;
+    width: 80%;
 }
 
 #contact-container{
@@ -213,8 +198,8 @@ main {
     flex-basis: 33%;
 }
 
-#contact-container{
-    padding-top: 13px;
+.box-contact{
+    margin-top: 5vh;
 }
 
 .box-contact > select{
@@ -222,20 +207,26 @@ main {
     min-height: 36px;
 }
 
+.box-contact > select:focus{
+    border: 2px solid #F33413;
+    color: #F33413;
+}
+
 .box-contact > input{
     width: 100%;
     height: 30px;
+}
+
+.box-contact > input:focus{
+    border: 2px solid #F33413;
+    outline: #F33413;
+    color: #F33413;
 }
 
 .box-contact > label{
     font-size: 14px;
     font-weight: 500;
 }
-
-.box-contact{
-    margin-top: 30px;
-}
-
 
 #box-message{
     display: flex;
@@ -264,13 +255,14 @@ main {
 
 #buttom-box{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 78%;
 }
 
 .buttom-message{
     height: 40px;
-    width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: #AACE9B;
     border: none;
     border-radius: 7px;
@@ -280,7 +272,6 @@ main {
 
 .buttom-message:hover{
     height: 40px;
-    width: 200px;
     border: 2px solid #286276;
     border-radius: 7px;
     background-color: #fff;
@@ -290,7 +281,8 @@ main {
 
 .buttom-x{
     height: 40px;
-    width: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: none;
     border-radius: 7px;
     background-color: #F33413;
@@ -300,7 +292,6 @@ main {
 
 .buttom-x:hover{
     height: 40px;
-    width: 120px;
     border: 2px solid #286276;
     border-radius: 7px;
     background-color: #fff;
@@ -318,17 +309,17 @@ main {
 
 #list-box{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 300px;
+    padding-bottom: 3vh;
 }
 
 .list-part{
-    padding-left: 10%;
-}
-
-.list-part:first-child{
-    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 18%;
+    padding-top: 3vh;
 }
 
 .list-part > ol > li > a{
@@ -337,9 +328,9 @@ main {
     color: #373867;
 }
 
-
-
  @media (min-width: 480px) {
+
+    /* Who we are */
     #who-we-are{
         line-height: 20px;
     }
@@ -352,6 +343,66 @@ main {
     #who-green{
         font-size: 20px;
         line-height: 25px;
+    }
+
+     /* functionalities */
+
+     .functionalities-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10vh;
+    }
+
+    .functionalities-items{
+        flex-direction: row;
+    }
+
+    .functionalities-items > div:first-child{
+        width: 70px;
+        height: 70px;
+        border: black solid 4px;
+        transform: rotate(45deg);
+    }
+    
+    .functionalities-items > div > i{
+        padding: 20px;
+        font-size: 30px;
+        transform: rotate(-45deg);
+    }
+
+    .func-text{
+        padding-top: 0vh;
+        padding-left: 5vh;
+    }
+
+    .func-text > p{
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 15px;
+    }
+
+    /* Contact*/
+
+    #contact-main-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #buttom-box{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #list-box{
+        flex-direction: row;
+    }
+
+    .list-part{
+        flex-basis: 28%;
     }
  }
     /*
@@ -379,56 +430,57 @@ main {
         margin-top: 20px;
     }
 
-    .functionalities-box{
-        flex-direction: column;
-        padding-top: 0px;
-    }
-
-    .functionalities-items{
-        padding-top: 70px;
-        padding-left: 5%;
-    }
-
-    #contact-main-container{
-        flex-direction: column;
-        width: 80%;
-    }
-
-    #list-box{
-        flex-direction: column;
-    }
-    
-    .list-part{
-        padding-left:0;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .list-part:nth-child(2){
-        padding-left: 20px;
-    }
-    
-    .list-part:first-child{
-        padding-left: 20px;
-    }
-  }
 */
 @media (min-width: 1023px) {
-
+    /* Who we are */
     #who-we-are{
         line-height: 30px;
     }
-    
+
     #who-blue{
         font-size: 30px;
         line-height: 35px;
     }
-    
+
     #who-green{
         font-size: 30px;
         line-height: 35px;
     }
-    /* Who we are */
+
+    /* functionalities */
+
+    .functionalities-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10vh;
+    }
+
+    .functionalities-items{
+        flex-direction: row;
+    }
+
+    .functionalities-items > div:first-child{
+        width: 125px;
+        height: 125px;
+    }
+
+    .functionalities-items > div > i{
+        padding: 40px;
+        font-size: 50px;
+    }
+
+    .func-text > p{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+    }
+
+    /* Contact */
+    .list-part{
+        flex-basis: 18%;
+    }
 }
 
 /*hola*/ /*

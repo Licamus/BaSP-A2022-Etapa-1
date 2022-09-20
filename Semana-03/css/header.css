@@ -1,8 +1,13 @@
 header{
     display: flex;
-    height: 100%;
+    height: 100vh;
     background-image: url("../assets/images/landing-desktop-imgs/img/intro-picture.png");
     background-size: cover;
+}
+
+h1 {
+    display: flex;
+    font-size: 40px;
 }
 
 #menu-icon{
@@ -15,44 +20,39 @@ header{
 
 #head-rectangle{
     display: flex;
-    width: 400px;
-    height: 100%;
-    margin-left: 76px;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    box-sizing: content-box;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-basis: 400px;
+    margin-left: 80px;
+    padding-left: 15px;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
 }
+#head-rectangle > div{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;
+}
 
 #head-rectangle p{
+    display: flex;
+    flex-wrap: wrap;
+    height: 20vh;
     line-height: 30px;
     font-size: 16px;
-    padding-bottom: 10%;
-    padding-left: 20px;
     color: rgba(255, 255, 255, 0.75);
 }
 
-h1 {
-    width:  100%;
-    padding-bottom: 6px;
-    padding-left: 20px;
-    font-size: 40px;
-}
-
 #head-rectangle h2 {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 20%;
     font-size: 20px;
 }
 
 #line-header{
     height: 2px;
     width: 70%;
-    padding-left: 20px;
     border-top: 2.5px solid #AACE9B;
 }
 
@@ -88,6 +88,6 @@ h1 {
     .fa-bars{
         padding: 40px;
         font-size: 30px;
-        color: #;
+        color: #F33413;
     }
 }

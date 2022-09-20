@@ -44,13 +44,13 @@ function plusD(number1, number2) {
     if (typeof number1 === 'number' && typeof number2 === 'number' ) {
         console.log('Es un número');
         if(Integer(number1)){
-        }else{
+        } else{
             number1=Math.trunc(number1);
             alert('Number 1 is not an integer');
             return number1;
         }
         if(Integer(number2)){
-        }else{
+        } else{
             number2=Math.trunc(number2);
             alert('Number 2 is not an integer');
             return number2;
@@ -68,29 +68,42 @@ console.log(num3);
 
 //Exercise e
 
-var num1=227, num2=5.3, num3;
+var num1=227, num2=5.7, num3;
 
-function validation(number){
+function validation(number,j){
     if(Integer(number)){
-    }else{
+    } else{
+        if(j=0){
+            alert('Is not an integer');
+        }
         number=Math.trunc(number);
-        alert('Is not an integer');
-        console.log(number);
+        return number;
     }
 }
 
-function plusE(number1, number2) {
-    var aux;
-    if (typeof number1 === 'number' && typeof number2 === 'number' ) {
+function plusE(number1, number2){
+    var i=0;
+    if (typeof number1 === 'number' && typeof number2 === 'number') {
         console.log('Es un número');
-        validation(number1);
-        validation(number2);
-        return number1 + number2;
     } else{
-        alert('One of the parameters has an error');
-        return NaN;
+            alert('One of the parameters has an error');
+            return NaN;
     }
-}
+
+    if (validation(number1,i)){
+        i++;
+        number1=validation(number1,i);
+        return number1;
+    }
+
+    if(validation(number2,i)){
+        i++;
+        number2=validation(number2,i);
+        return number2;
+    }
+    return number1+number2;
+
+    }
 
 num3=plusE(num1, num2);
 

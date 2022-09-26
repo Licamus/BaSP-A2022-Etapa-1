@@ -1,0 +1,45 @@
+header > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #AACE9B;
+    height: 10vh;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    height: 75vh;
+}
+
+#menu-icon{
+    display: flex;
+    position: fixed;
+}
+
+.fa-bars{
+    padding: 15px;
+    border: #F33413 solid 2px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #F33413;
+}
+
+#buttom-log-in{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+@media (min-width: 480px) {
+  
+}
+
+@media (min-width: 1024px) {
+    #menu-icon{
+        display: none;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+}

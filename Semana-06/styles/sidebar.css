@@ -1,0 +1,112 @@
+*{
+    box-sizing: content-box;
+}
+
+aside{
+    display: none;
+}
+
+@media (min-width: 480px) {
+    aside{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    aside{
+        position:fixed;
+        display: flex;
+        flex-direction: column;
+        align-content: start;
+        height:100vh;
+        width: 10%;
+    }
+
+    aside i{
+        font-size: 14px;
+        color: #F33413;
+    }
+
+    aside i:hover{
+        font-size: 14px;
+        color: #373867;
+    }
+
+    #logo > a{
+        text-decoration: none;
+        color:#373867 ;
+    }
+
+    #logo > a > p{
+        display: flex;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    #logo > a > img{
+        display: flex;
+    }
+
+    #logo{
+        display: flex;
+        flex-basis: 20vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(55, 56, 103, 0.4);
+    }
+
+    #sidebar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-basis: 80vh;
+    }
+
+    #sidebar-home{
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: space-between;
+        flex-basis: 15vh;
+        background-color: #fff;
+    }
+
+    #sidebar-home a{
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: #F33413;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+    }
+
+    #sidebar-home a i{
+        padding-right: 10px;
+    }
+
+    #sidebar-contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+        flex-basis: 25vh;
+        padding-left: 1vh;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px;
+        color: #F33413;
+    }
+
+    #contact-us-title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        text-decoration: underline #F33413;
+    }
+
+    .sidebar-text-contact i{
+        padding-right: 6%;
+    }
+}

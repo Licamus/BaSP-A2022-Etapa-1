@@ -1,0 +1,82 @@
+header{
+    display: flex;
+    height: 100vh;
+    background-image: url("../assets/images/landing-desktop-imgs/img/intro-picture.png");
+    background-size: cover;
+}
+
+#head-rectangle{
+    width: 100%;
+}
+
+#menu-icon{
+    display: flex;
+    position: fixed;
+}
+
+.fa-bars{
+    padding: 15px;
+    border: #F33413 solid 2px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #F33413;
+}
+
+#head-rectangle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+#head-rectangle > div{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;
+}
+
+#head-rectangle p{
+    display: flex;
+    flex-wrap: wrap;
+    height: 20vh;
+    line-height: 30px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#head-rectangle h2 {
+    padding-top: 0;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#line-header{
+    display: flex;
+    height: 2px;
+    width: 70%;
+    border-top: 2.5px solid #AACE9B;
+}
+
+@media (min-width: 480px) {
+    #head-rectangle{
+        flex-basis: 400px;
+        margin-left: 80px;
+        padding-left: 15px;
+        }
+}
+
+@media (min-width: 1024px) {
+    #menu-icon{
+        display: none;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+}

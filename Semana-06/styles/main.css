@@ -1,0 +1,468 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Who we are */
+#who-we-are{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2vh;
+    line-height: 15px;
+}
+
+.line-subtitle {
+    margin-left: 10%;
+    margin-top: 1%;
+    height: 2px;
+    max-width: 80%;
+    border-top: 7px solid #D9D9D9;
+}
+
+#who-blue{
+    padding-top: 5vh;
+    font-size: 15px;
+    line-height: 15px;
+    color: #373867;
+}
+
+#who-green{
+    padding-top: 5vh;
+    font-size: 15px;
+    line-height: 15px;
+    color:#AACE9B;
+}
+
+/* Why Images*/
+.why-image{
+   display: none;
+}
+
+#why-image-productivity{
+    background-image: url("../assets/images/landing-desktop-imgs/img/productivity-boster.png") ;
+    background-size: cover;
+}
+
+#why-image-traceability{
+    background-image: url("../assets/images/landing-desktop-imgs/img/work-traceability.png") ;
+    background-size: cover;
+}
+
+#why-image-leadership{
+    background-image: url("../assets/images/landing-desktop-imgs/img/leadership.png") ;
+    background-size: cover;
+}
+
+#why-image-decision{
+    background-image: url("../assets/images/landing-desktop-imgs/img/decision-making.png") ;
+    background-size: cover;
+}
+
+/* Why Left*/
+.why-left{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 70vh;
+}
+
+.line-why-left{
+    max-width: 100%;
+    height: 2px;
+    border-top: 4px solid #286276;
+}
+
+.why-left-text{
+    margin-left: 10%;
+    flex: 0 1 50%;;
+}
+
+.why-left-text > p{
+    padding-right: 5%;
+    padding-top: 5vh;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+/* Why Right */
+.why-right{
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 10%;
+    background-color: #D9D9D9;
+}
+
+.line-why-right{
+    height: 2px;
+    max-width: 100%;
+    border-top: 4px solid #fff;
+}
+
+.why-right-text{
+    flex: 0 1 50%;
+}
+
+.why-right-text > p{
+    padding-left: 5%;
+    padding-top: 5vh;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+/* Functionalities */
+#functionalities{
+    display: flex;
+    flex-direction: column;
+    padding:5vh;
+}
+
+.functionalities-items{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-left: 5%;
+}
+
+.functionalities-items > div:first-child{
+    width: 70px;
+    height: 70px;
+    border: black solid 4px;
+    transform: rotate(45deg);
+}
+
+.functionalities-items:hover > div:first-child{
+    border: #F33413 solid 4px;
+    color: #F33413;
+}
+
+.functionalities-items > div > i{
+    padding: 20px;
+    font-size: 30px;
+    transform: rotate(-45deg);
+}
+
+.func-text > p{
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
+}
+
+.func-text{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vh;
+}
+
+.functionalities-box{
+    flex-direction: column;
+    padding-top: 0px;
+}
+
+/* Contact*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+}
+
+#form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-main-container{
+    flex-direction: column;
+    width: 80%;
+}
+
+#contact-container{
+    flex-basis: 33%;
+}
+
+#name-container{
+    flex-basis: 33%;
+}
+
+.box-contact{
+    margin-top: 5vh;
+}
+
+.box-contact > select{
+    width: 100%;
+    min-height: 36px;
+}
+
+.box-contact > select:focus{
+    border: 2px solid #F33413;
+    color: #F33413;
+}
+
+.box-contact > input{
+    width: 100%;
+    height: 30px;
+}
+
+.box-contact > input:focus{
+    border: 2px solid #F33413;
+    outline: #F33413;
+    color: #F33413;
+}
+
+.box-contact > label{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#box-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 78%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#box-message-text-area{
+    justify-content: center;
+    align-content: center;
+}
+
+#box-message-text-area > label{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#box-message-text-area > textarea{
+    justify-content: center;
+    width: 100%;
+    min-height: 150px;
+}
+
+#buttom-box{
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+}
+
+.buttom-message{
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #AACE9B;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    color: #373867;
+}
+
+.buttom-message:hover{
+    height: 40px;
+    border: 2px solid #286276;
+    border-radius: 7px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #373867;
+}
+
+.buttom-x{
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 7px;
+    background-color: #F33413;
+    font-size: 15px;
+    color: #373867;
+}
+
+.buttom-x:hover{
+    height: 40px;
+    border: 2px solid #286276;
+    border-radius: 7px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #373867;
+}
+
+/* Order List */
+#list{
+    background-image: url("../assets/images/landing-desktop-imgs/img/list-picture.png");
+    background-size: cover;
+    height: fit-content;
+}
+
+#list-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3vh;
+}
+
+.list-part{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 18%;
+    padding-top: 3vh;
+}
+
+.list-part > ol > li > a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #373867;
+}
+
+ @media (min-width: 480px) {
+    /* Who we are */
+    #who-we-are{
+        line-height: 20px;
+    }
+
+    #who-blue{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #who-green{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    /* WHY */
+    .why-image{
+        max-height: 60vh;
+        display: flex;
+        justify-content: center;
+        flex: 0 1 30%;
+    }
+
+    .why-left-text > p{
+        font-size: 20px;
+    }
+
+    .why-right-text > p{
+        font-size: 20px;
+    }
+
+    /* functionalities */
+    .functionalities-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10vh;
+    }
+
+    .functionalities-items{
+        flex-direction: row;
+    }
+
+    .functionalities-items > div:first-child{
+        width: 70px;
+        height: 70px;
+        transform: rotate(45deg);
+    }
+
+    .functionalities-items > div > i{
+        padding: 20px;
+        font-size: 30px;
+        transform: rotate(-45deg);
+    }
+
+    .func-text{
+        padding-top: 0vh;
+        padding-left: 5vh;
+    }
+
+    .func-text > p{
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 15px;
+    }
+
+    /* Contact*/
+    #contact-main-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #buttom-box{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #list-box{
+        flex-direction: row;
+    }
+
+    .list-part{
+        flex-basis: 28%;
+    }
+ }
+
+@media (min-width: 1024px) {
+    /* Who we are */
+    #who-we-are{
+        line-height: 30px;
+    }
+
+    #who-blue{
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    #who-green{
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    /*why*/
+    .why-left-text > p{
+        font-size: 30px;
+    }
+
+    .why-right-text > p{
+        font-size: 30px;
+    }
+
+    /* functionalities */
+    .functionalities-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        padding-top: 10vh;
+    }
+
+    .functionalities-items{
+        flex-direction: row;
+    }
+
+    .functionalities-items > div:first-child{
+        width: 125px;
+        height: 125px;
+    }
+
+    .functionalities-items > div > i{
+        padding: 40px;
+        font-size: 50px;
+    }
+
+    .func-text > p{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+    }
+
+    /* Contact */
+    .list-part{
+        flex-basis: 18%;
+    }
+}

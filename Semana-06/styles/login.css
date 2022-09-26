@@ -9,7 +9,8 @@ header > h1{
 main{
     display: flex;
     justify-content: space-evenly;
-    height: 76vh;
+    min-height: 71vh;
+    margin-bottom: 5vh;
 }
 
 #menu-icon{

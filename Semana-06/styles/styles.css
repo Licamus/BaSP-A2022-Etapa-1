@@ -51,7 +51,11 @@ input{
 }
 
 .check{
-    border-color: green;
+    border: 2px solid #376741;
+}
+
+.un-check{
+    border: 2px solid #da0808;
 }
 
 @media (min-width: 480px) {

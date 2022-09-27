@@ -10,12 +10,59 @@ window.onload = function() {
     var inputPassword = document.querySelector('[name=passw]');
     var inputPasswordR = document.querySelector('[name=passw-repeat]');
 
+    inputName.onfocus = function(){
+        inputName.classList.add("check");
+    }
+
+    inputLastName.onfocus = function(){
+        inputLastName.classList.add("check");
+    }
+
+    inputId.onfocus = function(){
+        inputId.classList.add("check");
+    }
+
+    inputDate.onfocus = function(){
+        inputDate.classList.add("check");
+    }
+
+    inputDirection.onfocus = function(){
+        inputDirection.classList.add("check");
+    }
+
+    inputLocation.onfocus = function(){
+        inputLocation.classList.add("check");
+    }
+
+    inputPostalCode.onfocus = function(){
+        inputPostalCode.classList.add("check");
+    }
 
     inputEmail.onfocus = function(){
         inputEmail.classList.add("check");
     }
-    
+
     inputPassword.onfocus = function(){
         inputPassword.classList.add("check");
     }
+
+
+    inputPasswordR.onfocus = function(){
+        inputPasswordR.classList.add("check");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }

@@ -12,6 +12,13 @@ window.onload = function() {
     var inputPasswordR = document.querySelector('[name=passw-repeat]');
     var validTotal = document.querySelector('[name=button-validate]');
     var ghostp = document.getElementsByClassName('validation-ghost-p');
+    var inputG = document.getElementsByTagName("input");
+    var array = [];
+    var array2= [];
+
+    for (i=0; i<=10; i++){
+        array[i]=1;
+    }
 
     //On focus all
 
@@ -87,11 +94,13 @@ window.onload = function() {
     inputName.onblur = function(){
         if(lettersOnly(inputName) && lenghtThree(inputName)){
             inputName.nextElementSibling.classList.remove("on");
+            array[0]=0;
             inputName.classList.remove("un-check");
             inputName.classList.add("check");
         }
         else{
             inputName.nextElementSibling.classList.add("on");
+            array[0]='Invalid Name\n';
             inputName.nextElementSibling.innerText = "Invalid Name";
             inputName.classList.remove("check");
             inputName.classList.add("un-check");
@@ -103,11 +112,13 @@ window.onload = function() {
     inputLastName.onblur = function(){
         if(lettersOnly(inputLastName) && lenghtThree(inputLastName)){
             inputLastName.nextElementSibling.classList.remove("on");
+            array[1]=0;
             inputLastName.classList.remove("un-check");
             inputLastName.classList.add("check");
         }
         else{
             inputLastName.nextElementSibling.classList.add("on");
+            array[1]='Invalid Last Name\n';
             inputLastName.nextElementSibling.innerText = "Invalid Last Name";
             inputLastName.classList.remove("check");
             inputLastName.classList.add("un-check");
@@ -119,11 +130,13 @@ window.onload = function() {
     inputId.onblur = function(){
         if(numbersOnly(inputId) && lenghtSeven(inputId)){
             inputId.nextElementSibling.classList.remove("on");
+            array[2]=0;
             inputId.classList.remove("un-check");
             inputId.classList.add("check");
         }
         else{
             inputId.nextElementSibling.classList.add("on");
+            array[2]='Invalid ID\n';
             inputId.nextElementSibling.innerText = "Invalid ID";
             inputId.classList.remove("check");
             inputId.classList.add("un-check");
@@ -132,17 +145,20 @@ window.onload = function() {
 
     //validate Date
 
-    inputDate.onblur = function(){
-        if(lenghtCero(inputDate)) {
+    inputDate.onblur = function() {
+        if(lenghtCero(inputDate)==false){
             inputDate.nextElementSibling.classList.remove("on");
-            inputDate.classList.remove("check");
-            inputDate.classList.add("un-check");
+            array[3]=0;
+            inputDate.classList.remove("un-check");
+            inputDate.classList.add("check");
+            
         }
         else{
             inputDate.nextElementSibling.classList.add("on");
+            array[3]='Invalid Date\n';
             inputDate.nextElementSibling.innerText = "Invalid Date";
-            inputDate.classList.remove("un-check");
-            inputDate.classList.add("check");
+            inputDate.classList.remove("check");
+            inputDate.classList.add("un-check");
         }
     }
 
@@ -151,11 +167,13 @@ window.onload = function() {
     inputPhone.onblur = function(){
         if(numbersOnly(inputPhone) && lenghtTen(inputPhone)){
             inputPhone.nextElementSibling.classList.remove("on");
+            array[4]=0;
             inputPhone.classList.remove("un-check");
             inputPhone.classList.add("check");
         }
         else{
             inputPhone.nextElementSibling.classList.add("on");
+            array[4]='Invalid Phone\n';
             inputPhone.nextElementSibling.innerText = "Invalid Phone";
             inputPhone.classList.remove("check");
             inputPhone.classList.add("un-check");
@@ -167,11 +185,13 @@ window.onload = function() {
     inputDirection.onblur = function(){
         if(alphanumericOnly(inputDirection) && lenghtThree(inputDirection) && spaceB(inputDirection) && numbersPassword(inputDirection) && lettersPassword(inputDirection)){
             inputDirection.nextElementSibling.classList.remove("on");
+            array[5]=0;
             inputDirection.classList.remove("un-check");
             inputDirection.classList.add("check");
         }
         else{
             inputDirection.nextElementSibling.classList.add("on");
+            array[5]='Invalid Direction\n';
             inputDirection.nextElementSibling.innerText = "Invalid Direction";
             inputDirection.classList.remove("check");
             inputDirection.classList.add("un-check");
@@ -183,11 +203,13 @@ window.onload = function() {
     inputLocation.onblur = function(){
         if(alphanumericOnly(inputLocation) && lenghtThree(inputLocation)){
             inputLocation.nextElementSibling.classList.remove("on");
+            array[6]=0;
             inputLocation.classList.remove("un-check");
             inputLocation.classList.add("check");
         }
         else{
             inputLocation.nextElementSibling.classList.add("on");
+            array[6]='Invalid Location\n';
             inputLocation.nextElementSibling.innerText = "Invalid Location";
             inputLocation.classList.remove("check");
             inputLocation.classList.add("un-check");
@@ -199,11 +221,13 @@ window.onload = function() {
      inputPostalCode.onblur = function(){
         if(numbersOnly(inputPostalCode) && lenghtFour(inputPostalCode) && lenghtFiveMax(inputPostalCode)){
             inputPostalCode.nextElementSibling.classList.remove("on");
+            array[7]=0;
             inputPostalCode.classList.remove("un-check");
             inputPostalCode.classList.add("check");
         }
         else{
             inputPostalCode.nextElementSibling.classList.add("on");
+            array[7]='Invalid Postal Code\n';
             inputPostalCode.nextElementSibling.innerText = "Invalid Postal Code";
             inputPostalCode.classList.remove("check");
             inputPostalCode.classList.add("un-check");
@@ -216,11 +240,13 @@ window.onload = function() {
     inputPassword.onblur = function(){
         if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
             inputPassword.nextElementSibling.classList.remove("on");
+            array[8]=0;
             inputPassword.classList.remove("un-check");
             inputPassword.classList.add("check");
         }
         else{
             inputPassword.nextElementSibling.classList.add("on");
+            array[8]='Invalid Password\n';
             inputPassword.nextElementSibling.innerText = "Invalid Password";
             inputPassword.classList.remove("check");
             inputPassword.classList.add("un-check");
@@ -232,11 +258,13 @@ window.onload = function() {
     inputPasswordR.onblur = function(){
         if(rePassword(inputPasswordR,inputPassword) && (lenghtCero(inputPasswordR)==false)){
             inputPasswordR.nextElementSibling.classList.remove("on");
+            array[9]=0;
             inputPasswordR.classList.remove("un-check");
             inputPasswordR.classList.add("check");
         }
         else{
             inputPasswordR.nextElementSibling.classList.add("on");
+            array[9]='Invalid Repeat Password\n';
             inputPasswordR.nextElementSibling.innerText = "Invalid Repeat Password";
             inputPasswordR.classList.remove("check");
             inputPasswordR.classList.add("un-check");
@@ -248,12 +276,14 @@ window.onload = function() {
     inputEmail.onblur = function(){
         if(validateEmail(inputEmail)){
             inputEmail.nextElementSibling.classList.remove("on");
+            array[10]=0;
             inputEmail.classList.remove("un-check");
             inputEmail.classList.add("check");
         }
         else{
             inputEmail.nextElementSibling.classList.add("on");
-            inputEmail.nextElementSibling.innerText = "Invalid Email";
+            array[10]='Invalid Email\n';
+            inputEmail.nextElementSibling.innerText = "Invalid Email\n";
             inputEmail.classList.remove("check");
             inputEmail.classList.add("un-check");
         }
@@ -261,12 +291,34 @@ window.onload = function() {
     }
 
     //validate buttom
+
     validTotal.onclick = function(e){
         e.preventDefault();
-        alert("Valid account!");
+        var j=0, w=0;
+        for (i=0; i<=10; i++){
+            if((array[i]!=0) && (array[i]!=1)){
+                array2[j]=array[i];
+                j++;
+            }
+            if(array[i]==1){
+                w++;
+                inputG[i].nextElementSibling.classList.add("on");
+                inputG[i].nextElementSibling.innerText = "Complete this field";
+            }
+        }
 
+        if(w>0){
+            alert('Incompleted fields');
+        }
 
-}
+        if((w==0) && (array2.length==0)){
+            alert('Account Created');
+        }
+        else{
+            alert(array2);
+        }
+
+    }
 
 
 /***************************************************************************************************************************************** */

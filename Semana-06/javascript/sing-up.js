@@ -3,6 +3,7 @@ window.onload = function() {
     var inputLastName = document.querySelector('[name=last-name-sing]');
     var inputId = document.querySelector('[name=id-sing]');
     var inputDate = document.querySelector('[name=date-of-birth]');
+    var inputPhone = document.querySelector('[name=phonenumber]');
     var inputDirection = document.querySelector('[name=direction]');
     var inputLocation = document.querySelector('[name=location]');
     var inputPostalCode = document.querySelector('[name=postal-code]');
@@ -28,6 +29,11 @@ window.onload = function() {
     inputDate.onfocus = function(){
         inputDate.classList.remove("check");
         inputDate.classList.remove("un-check");
+    }
+
+    inputPhone.onfocus = function(){
+        inputPhone.classList.remove("check");
+        inputPhone.classList.remove("un-check");
     }
 
     inputDirection.onfocus = function(){
@@ -100,7 +106,59 @@ window.onload = function() {
         }
     }
 
-     //validate Postal Code
+    //validate Date
+
+    inputDate.onblur = function(){
+        if(lenghtCero(inputDate)) {
+            inputDate.classList.remove("check");
+            inputDate.classList.add("un-check");
+        }
+        else{
+            inputDate.classList.remove("un-check");
+            inputDate.classList.add("check");
+        }
+    }
+
+    //validate Phone
+
+    inputPhone.onblur = function(){
+        if(numbersOnly(inputPhone) && lenghtTen(inputPhone)){
+            inputPhone.classList.remove("un-check");
+            inputPhone.classList.add("check");
+        }
+        else{
+            inputPhone.classList.remove("check");
+            inputPhone.classList.add("un-check");
+        }
+    }
+
+    //validate direction
+
+    inputDirection.onblur = function(){
+        if(alphanumericOnly(inputDirection) && lenghtThree(inputDirection) && spaceB(inputDirection) && numbersPassword(inputDirection) && lettersPassword(inputDirection)){
+            inputDirection.classList.remove("un-check");
+            inputDirection.classList.add("check");
+        }
+        else{
+            inputDirection.classList.remove("check");
+            inputDirection.classList.add("un-check");
+        }
+    }
+
+     //validate location
+
+    inputLocation.onblur = function(){
+        if(alphanumericOnly(inputLocation) && lenghtThree(inputLocation)){
+            inputLocation.classList.remove("un-check");
+            inputLocation.classList.add("check");
+        }
+        else{
+            inputLocation.classList.remove("check");
+            inputLocation.classList.add("un-check");
+        }
+    }
+
+    //validate Postal Code
 
      inputPostalCode.onblur = function(){
         if(numbersOnly(inputPostalCode) && lenghtFour(inputPostalCode) && lenghtFiveMax(inputPostalCode)){
@@ -130,7 +188,7 @@ window.onload = function() {
     //validate re password
 
     inputPasswordR.onblur = function(){
-        if(rePassword(inputPasswordR,inputPassword)){
+        if(rePassword(inputPasswordR,inputPassword) && (lenghtCero(inputPasswordR)==false)){
             inputPasswordR.classList.remove("un-check");
             inputPasswordR.classList.add("check");
         }
@@ -147,7 +205,6 @@ window.onload = function() {
 
     }
 
-  
 
 /***************************************************************************************************************************************** */
 
@@ -163,8 +220,8 @@ window.onload = function() {
 
             if (letters.indexOf(inputText.value.charAt(i),0)==-1){
                 return false;
+            }
         }
-         }
         return true;
     }
 
@@ -182,6 +239,48 @@ window.onload = function() {
         return true;
     }
 
+    //Have alpha numeric?
+
+    function alphanumericOnly(inputText){
+
+        var letters="abcdefghyjklmnñopqrstuvwxyz123456789 ";
+
+        inputText.value = inputText.value.toLowerCase();
+        for(i=0; i<inputText.value.length; i++){
+
+            if (letters.indexOf(inputText.value.charAt(i),0)==-1){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //Have a space or  between?
+
+    function spaceB(inputText){
+
+        var letters="- ";
+        var auxiliar=inputText.value.length;
+
+        auxiliar=auxiliar-1;
+
+        for(i=1; i<auxiliar; i++){
+
+        if (letters.indexOf(inputText.value.charAt(i),1)!=-1){
+            return true;
+        }
+        }
+        return false;
+    }
+
+    //lenght  0
+
+    function lenghtCero(inputText){
+        if(inputText.value.length==0){
+            return true;
+        }
+        return false;
+    }
 
     //lenght >=3
 
@@ -210,7 +309,7 @@ window.onload = function() {
         return false;
     }
 
-    //lenght password >=7
+    //lenght  >=7
 
     function lenghtSeven(inputText){
         if(inputText.value.length>=7){
@@ -223,6 +322,15 @@ window.onload = function() {
 
     function lenghtPassword(inputText){
         if(inputText.value.length>=8){
+            return true;
+        }
+        return false;
+    }
+
+     //lenght password ==10
+
+     function lenghtTen(inputText){
+        if(inputText.value.length==10){
             return true;
         }
         return false;
@@ -242,7 +350,6 @@ window.onload = function() {
         return false;
     }
 
-    
     //letter password
 
     function lettersPassword(inputText){
@@ -290,20 +397,5 @@ window.onload = function() {
             inputText.classList.add("un-check");
             return false;
         }
-    
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+}

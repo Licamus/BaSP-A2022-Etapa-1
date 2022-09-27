@@ -13,59 +13,71 @@ window.onload = function() {
     var validTotal = document.querySelector('[name=button-validate]');
     var ghostp = document.getElementsByClassName('validation-ghost-p');
 
+    //On focus all
 
     inputName.onfocus = function(){
+        inputName.nextElementSibling.classList.remove("on");
         inputName.classList.remove("check");
         inputName.classList.remove("un-check");
     }
 
     inputLastName.onfocus = function(){
+        inputLastName.nextElementSibling.classList.remove("on");
         inputLastName.classList.remove("check");
         inputLastName.classList.remove("un-check");
     }
 
     inputId.onfocus = function(){
+        inputId.nextElementSibling.classList.remove("on");
         inputId.classList.remove("check");
         inputId.classList.remove("un-check");
     }
 
     inputDate.onfocus = function(){
+        inputDate.nextElementSibling.classList.remove("on");
         inputDate.classList.remove("check");
         inputDate.classList.remove("un-check");
     }
 
     inputPhone.onfocus = function(){
+        inputPhone.nextElementSibling.classList.remove("on");
         inputPhone.classList.remove("check");
         inputPhone.classList.remove("un-check");
     }
 
     inputDirection.onfocus = function(){
+        inputDirection.nextElementSibling.classList.remove("on");
         inputDirection.classList.remove("check");
         inputDirection.classList.remove("un-check");
     }
 
     inputLocation.onfocus = function(){
+        inputLocation.nextElementSibling.classList.remove("on");
         inputLocation.classList.remove("check");
         inputLocation.classList.remove("un-check");
     }
 
     inputPostalCode.onfocus = function(){
+        inputPostalCode.nextElementSibling.classList.remove("on");
         inputPostalCode.classList.remove("check");
         inputPostalCode.classList.remove("un-check");
     }
 
     inputEmail.onfocus = function(){
+        inputEmail.nextElementSibling.classList.remove("on");
         inputEmail.classList.remove("check");
         inputEmail.classList.remove("un-check");
     }
 
     inputPassword.onfocus = function(){
+        inputPassword.nextElementSibling.classList.remove("on");
         inputPassword.classList.remove("check");
         inputPassword.classList.remove("un-check");
     }
 
 
     inputPasswordR.onfocus = function(){
+        inputPasswordR.nextElementSibling.classList.remove("on");
         inputPasswordR.classList.remove("check");
         inputPasswordR.classList.remove("un-check");
     }
@@ -249,7 +261,9 @@ window.onload = function() {
     }
 
     //validate buttom
-    validTotal.onblur = function(){
+    validTotal.onclick = function(e){
+        e.preventDefault();
+        alert("Valid account!");
 
 
 }
@@ -273,16 +287,16 @@ window.onload = function() {
         return true;
     }
 
-     //Have only Numbers?
+    //Have only Numbers?
 
-     function numbersOnly(inputText){
+    function numbersOnly(inputText){
 
         var numbers="0123456789";
 
         for(i=0; i<inputText.value.length; i++){
-        if (numbers.indexOf(inputText.value.charAt(i),0)==-1){
-            return false;
-        }
+            if (numbers.indexOf(inputText.value.charAt(i),0)==-1){
+                return false;
+            }
         }
         return true;
     }
@@ -294,7 +308,6 @@ window.onload = function() {
         var letters="abcdefghyjklmnñopqrstuvwxyz123456789ABCDEFGHYJKLMNÑOPQRSTUVWXYZ ";
 
         for(i=0; i<inputText.value.length; i++){
-
             if (letters.indexOf(inputText.value.charAt(i),0)==-1){
                 return false;
             }
@@ -312,10 +325,9 @@ window.onload = function() {
         auxiliar=auxiliar-1;
 
         for(i=1; i<auxiliar; i++){
-
-        if (letters.indexOf(inputText.value.charAt(i),1)!=-1){
-            return true;
-        }
+            if (letters.indexOf(inputText.value.charAt(i),1)!=-1){
+                return true;
+            }
         }
         return false;
     }
@@ -374,9 +386,9 @@ window.onload = function() {
         return false;
     }
 
-     //lenght password ==10
+    //lenght password ==10
 
-     function lenghtTen(inputText){
+    function lenghtTen(inputText){
         if(inputText.value.length==10){
             return true;
         }
@@ -390,9 +402,9 @@ window.onload = function() {
         var numbers="0123456789";
 
         for(i=0; i<inputText.value.length; i++){
-        if (numbers.indexOf(inputText.value.charAt(i),0)!=-1){
-            return true;
-        }
+            if (numbers.indexOf(inputText.value.charAt(i),0)!=-1){
+                return true;
+            }
         }
         return false;
     }
@@ -406,9 +418,9 @@ window.onload = function() {
         for(i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
                 return true;
+            }
         }
-    }
-    return false;
+        return false;
     }
 
     //validate RE password true or false
@@ -431,14 +443,10 @@ window.onload = function() {
 
         if(inputText.value.match(mailformat))
         {
-            //alert("Valid email address!");
-            
             return true;
         }
         else
         {
-            //alert("You have entered an invalid email address!");
-           
             return false;
         }
     }

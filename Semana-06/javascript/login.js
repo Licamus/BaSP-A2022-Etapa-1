@@ -48,9 +48,17 @@ window.onload = function() {
         }
         else{
             if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword))==false){
+                if(lenghtCero(inputPassword)){
+                    inputPassword.nextElementSibling.classList.add("on");
+                    inputPassword.nextElementSibling.innerText = "Complete this field";
+                }
                 alert("Invalid password!");
             }
             if(validateEmail(inputEmail)==false){
+                if(lenghtCero(inputEmail)){
+                    inputEmail.nextElementSibling.classList.add("on");
+                    inputEmail.nextElementSibling.innerText = "Complete this field";
+                }
                 alert("Invalid email!");
             }
         }
@@ -59,13 +67,24 @@ window.onload = function() {
     //ON FOCUS
 
     inputEmail.onfocus = function(){
+        inputEmail.nextElementSibling.classList.remove("on");
         inputEmail.classList.remove("check");
         inputEmail.classList.remove("un-check");
     }
 
     inputPassword.onfocus = function(){
+        inputPassword.nextElementSibling.classList.remove("on");
         inputPassword.classList.remove("check");
         inputPassword.classList.remove("un-check");
+    }
+
+    //lenght cero
+
+    function lenghtCero(inputText){
+        if(inputText.value.length==0){
+            return true;
+        }
+        return false;
     }
 
     //lenght password

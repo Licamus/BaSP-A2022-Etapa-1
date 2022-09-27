@@ -50,7 +50,8 @@ window.onload = function() {
 
 
     inputPasswordR.onfocus = function(){
-        inputPasswordR.classList.add("check");
+        inputPasswordR.classList.remove("check");
+        inputPasswordR.classList.remove("un-check");
     }
 
 
@@ -67,7 +68,20 @@ window.onload = function() {
         }
     }
 
-    //validate email
+        //validate re password
+
+        inputPasswordR.onblur = function(){
+            if(rePassword(inputPasswordR,inputPassword)){
+                inputPasswordR.classList.remove("un-check");
+                inputPasswordR.classList.add("check");
+            }
+            else{
+                inputPasswordR.classList.remove("check");
+                inputPasswordR.classList.add("un-check");
+            }
+        }
+
+    //validate email call
 
     inputEmail.onblur = function(){
         validateEmail(inputEmail);
@@ -122,6 +136,18 @@ window.onload = function() {
     return false;
     }
 
+    //validate RE password true or false
+
+    function rePassword(inputText, inputText2){
+
+        if(inputText.value != inputText2.value){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
     // Validate email
 
     function validateEmail(inputText)
@@ -142,6 +168,8 @@ window.onload = function() {
             inputText.classList.add("un-check");
             return false;
         }
+    
+
     }
 
 

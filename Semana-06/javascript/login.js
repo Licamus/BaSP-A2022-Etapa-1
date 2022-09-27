@@ -1,130 +1,125 @@
 window.onload = function() {
 
-var inputEmail = document.querySelector('[name=emaillog]');
+    var inputEmail = document.querySelector('[name=emaillog]');
 
-var inputPassword = document.querySelector('[name=passw]');
+    var inputPassword = document.querySelector('[name=passw]');
 
-var validTotal = document.querySelector('[name=button-validate]');
+    var validTotal = document.querySelector('[name=button-validate]');
 
-var boxInput = document.getElementsByClassName('box-contact');
+    //validate password
 
-console.log(boxInput[0]);
-
-var errorp = document.createElement('p');
-
-// create p
-
-errorp.appendChild(document.createTextNode('HOLAAAAAAAAAAAAAAAAAAAAA'));
-
-//validate password
-
-inputPassword.onblur = function(){
-    if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
-        inputPassword.classList.remove("un-check");
-        inputPassword.classList.add("check");
+    inputPassword.onblur = function(){
+        if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
+            inputPassword.nextElementSibling.classList.remove("on");
+            inputPassword.classList.remove("un-check");
+            inputPassword.classList.add("check");
+        }
+        else{
+            inputPassword.nextElementSibling.classList.add("on");
+            inputPassword.nextElementSibling.innerText = "Invalid Password";
+            inputPassword.classList.remove("check");
+            inputPassword.classList.add("un-check");
+        }
     }
-    else{
+
+    //validate email
+
+    inputEmail.onblur = function(){
+        if(validateEmail(inputEmail)){
+            inputEmail.nextElementSibling.classList.remove("on");
+            inputEmail.classList.remove("un-check");
+            inputEmail.classList.add("check");
+        }
+        else{
+            inputEmail.nextElementSibling.classList.add("on");
+            inputEmail.nextElementSibling.innerText = "Invalid Email";
+            inputEmail.classList.remove("check");
+            inputEmail.classList.add("un-check");
+        }
+
+    }
+
+    //validate buttom
+
+    validTotal.onclick = function(e){
+        e.preventDefault();
+        if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail) && lenghtPassword(inputPassword)){
+            alert("Valid account!");
+        }
+        else{
+            if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword))==false){
+                alert("Invalid password!");
+            }
+            if(validateEmail(inputEmail)==false){
+                alert("Invalid email!");
+            }
+        }
+    }
+
+    //ON FOCUS
+
+    inputEmail.onfocus = function(){
+        inputEmail.classList.remove("check");
+        inputEmail.classList.remove("un-check");
+    }
+
+    inputPassword.onfocus = function(){
         inputPassword.classList.remove("check");
-        inputPassword.classList.add("un-check");
+        inputPassword.classList.remove("un-check");
     }
-}
 
-//validate email
+    //lenght password
 
-inputEmail.onblur = function(){
-    validateEmail(inputEmail);
-
-}
-
-//validate buttom
-
-validTotal.onclick = function(){
-
-    if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail) && lenghtPassword(inputPassword)){
-        alert("Valid account!");
-    }
-    else{
-        if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword))==false){
-            alert("Invalid password!");
-        }
-        if(validateEmail(inputEmail)==false){
-            alert("Invalid email!");
-        }
-
-    }
-}
-
-//ON FOCUS
-
-inputEmail.onfocus = function(){
-    inputEmail.classList.remove("check");
-    inputEmail.classList.remove("un-check");
-}
-
-inputPassword.onfocus = function(){
-    inputPassword.classList.remove("check");
-    inputPassword.classList.remove("un-check");
-}
-
-//lenght password
-
-function lenghtPassword(inputText){
-    if(inputText.value.length>=8){
-        return true;
-    }
-    return false;
-}
-
-//number password
-
-function numbersPassword(inputText){
-
-    var numbers="0123456789";
-
-    for(i=0; i<inputText.value.length; i++){
-       if (numbers.indexOf(inputText.value.charAt(i),0)!=-1){
-          return true;
-       }
-    }
-    return false;
- }
-
-
-//letter password
-
-function lettersPassword(inputText){
-
-    var letters="abcdefghyjklmnñopqrstuvwxyz";
-
-    inputText.value = inputText.value.toLowerCase();
-    for(i=0; i<inputText.value.length; i++){
-        if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
+    function lenghtPassword(inputText){
+        if(inputText.value.length>=8){
             return true;
-      }
-   }
-   return false;
-}
-
-// Validate email
-
-function validateEmail(inputText)
-{
-    var mailformat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-
-    if(inputText.value.match(mailformat))
-    {
-        //alert("Valid email address!");
-        inputText.classList.remove("un-check");
-        inputText.classList.add("check");
-        return true;
-    }
-    else
-    {
-        //alert("You have entered an invalid email address!");
-        inputText.classList.remove("check");
-        inputText.classList.add("un-check");
+        }
         return false;
     }
-}
+
+    //number password
+
+    function numbersPassword(inputText){
+
+        var numbers="0123456789";
+
+        for(i=0; i<inputText.value.length; i++){
+            if (numbers.indexOf(inputText.value.charAt(i),0)!=-1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    //letter password
+
+    function lettersPassword(inputText){
+
+        var letters="abcdefghyjklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+
+        for(i=0; i<inputText.value.length; i++){
+            if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
+                return true;
+        }
+    }
+    return false;
+    }
+
+    // Validate email
+
+    function validateEmail(inputText)
+    {
+        var mailformat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+        if(inputText.value.match(mailformat))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 }

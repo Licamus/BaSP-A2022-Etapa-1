@@ -10,6 +10,9 @@ window.onload = function() {
     var inputEmail = document.querySelector('[name=emaillog]');
     var inputPassword = document.querySelector('[name=passw]');
     var inputPasswordR = document.querySelector('[name=passw-repeat]');
+    var validTotal = document.querySelector('[name=button-validate]');
+    var ghostp = document.getElementsByClassName('validation-ghost-p');
+
 
     inputName.onfocus = function(){
         inputName.classList.remove("check");
@@ -71,10 +74,13 @@ window.onload = function() {
 
     inputName.onblur = function(){
         if(lettersOnly(inputName) && lenghtThree(inputName)){
+            inputName.nextElementSibling.classList.remove("on");
             inputName.classList.remove("un-check");
             inputName.classList.add("check");
         }
         else{
+            inputName.nextElementSibling.classList.add("on");
+            inputName.nextElementSibling.innerText = "Invalid Name";
             inputName.classList.remove("check");
             inputName.classList.add("un-check");
         }
@@ -84,10 +90,13 @@ window.onload = function() {
 
     inputLastName.onblur = function(){
         if(lettersOnly(inputLastName) && lenghtThree(inputLastName)){
+            inputLastName.nextElementSibling.classList.remove("on");
             inputLastName.classList.remove("un-check");
             inputLastName.classList.add("check");
         }
         else{
+            inputLastName.nextElementSibling.classList.add("on");
+            inputLastName.nextElementSibling.innerText = "Invalid Last Name";
             inputLastName.classList.remove("check");
             inputLastName.classList.add("un-check");
         }
@@ -97,10 +106,13 @@ window.onload = function() {
 
     inputId.onblur = function(){
         if(numbersOnly(inputId) && lenghtSeven(inputId)){
+            inputId.nextElementSibling.classList.remove("on");
             inputId.classList.remove("un-check");
             inputId.classList.add("check");
         }
         else{
+            inputId.nextElementSibling.classList.add("on");
+            inputId.nextElementSibling.innerText = "Invalid ID";
             inputId.classList.remove("check");
             inputId.classList.add("un-check");
         }
@@ -110,10 +122,13 @@ window.onload = function() {
 
     inputDate.onblur = function(){
         if(lenghtCero(inputDate)) {
+            inputDate.nextElementSibling.classList.remove("on");
             inputDate.classList.remove("check");
             inputDate.classList.add("un-check");
         }
         else{
+            inputDate.nextElementSibling.classList.add("on");
+            inputDate.nextElementSibling.innerText = "Invalid Date";
             inputDate.classList.remove("un-check");
             inputDate.classList.add("check");
         }
@@ -123,10 +138,13 @@ window.onload = function() {
 
     inputPhone.onblur = function(){
         if(numbersOnly(inputPhone) && lenghtTen(inputPhone)){
+            inputPhone.nextElementSibling.classList.remove("on");
             inputPhone.classList.remove("un-check");
             inputPhone.classList.add("check");
         }
         else{
+            inputPhone.nextElementSibling.classList.add("on");
+            inputPhone.nextElementSibling.innerText = "Invalid Phone";
             inputPhone.classList.remove("check");
             inputPhone.classList.add("un-check");
         }
@@ -136,10 +154,13 @@ window.onload = function() {
 
     inputDirection.onblur = function(){
         if(alphanumericOnly(inputDirection) && lenghtThree(inputDirection) && spaceB(inputDirection) && numbersPassword(inputDirection) && lettersPassword(inputDirection)){
+            inputDirection.nextElementSibling.classList.remove("on");
             inputDirection.classList.remove("un-check");
             inputDirection.classList.add("check");
         }
         else{
+            inputDirection.nextElementSibling.classList.add("on");
+            inputDirection.nextElementSibling.innerText = "Invalid Direction";
             inputDirection.classList.remove("check");
             inputDirection.classList.add("un-check");
         }
@@ -149,10 +170,13 @@ window.onload = function() {
 
     inputLocation.onblur = function(){
         if(alphanumericOnly(inputLocation) && lenghtThree(inputLocation)){
+            inputLocation.nextElementSibling.classList.remove("on");
             inputLocation.classList.remove("un-check");
             inputLocation.classList.add("check");
         }
         else{
+            inputLocation.nextElementSibling.classList.add("on");
+            inputLocation.nextElementSibling.innerText = "Invalid Location";
             inputLocation.classList.remove("check");
             inputLocation.classList.add("un-check");
         }
@@ -162,10 +186,13 @@ window.onload = function() {
 
      inputPostalCode.onblur = function(){
         if(numbersOnly(inputPostalCode) && lenghtFour(inputPostalCode) && lenghtFiveMax(inputPostalCode)){
+            inputPostalCode.nextElementSibling.classList.remove("on");
             inputPostalCode.classList.remove("un-check");
             inputPostalCode.classList.add("check");
         }
         else{
+            inputPostalCode.nextElementSibling.classList.add("on");
+            inputPostalCode.nextElementSibling.innerText = "Invalid Postal Code";
             inputPostalCode.classList.remove("check");
             inputPostalCode.classList.add("un-check");
         }
@@ -176,10 +203,13 @@ window.onload = function() {
 
     inputPassword.onblur = function(){
         if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
+            inputPassword.nextElementSibling.classList.remove("on");
             inputPassword.classList.remove("un-check");
             inputPassword.classList.add("check");
         }
         else{
+            inputPassword.nextElementSibling.classList.add("on");
+            inputPassword.nextElementSibling.innerText = "Invalid Password";
             inputPassword.classList.remove("check");
             inputPassword.classList.add("un-check");
         }
@@ -189,10 +219,13 @@ window.onload = function() {
 
     inputPasswordR.onblur = function(){
         if(rePassword(inputPasswordR,inputPassword) && (lenghtCero(inputPasswordR)==false)){
+            inputPasswordR.nextElementSibling.classList.remove("on");
             inputPasswordR.classList.remove("un-check");
             inputPasswordR.classList.add("check");
         }
         else{
+            inputPasswordR.nextElementSibling.classList.add("on");
+            inputPasswordR.nextElementSibling.innerText = "Invalid Repeat Password";
             inputPasswordR.classList.remove("check");
             inputPasswordR.classList.add("un-check");
         }
@@ -201,9 +234,25 @@ window.onload = function() {
     //validate email call
 
     inputEmail.onblur = function(){
-        validateEmail(inputEmail);
+        if(validateEmail(inputEmail)){
+            inputEmail.nextElementSibling.classList.remove("on");
+            inputEmail.classList.remove("un-check");
+            inputEmail.classList.add("check");
+        }
+        else{
+            inputEmail.nextElementSibling.classList.add("on");
+            inputEmail.nextElementSibling.innerText = "Invalid Email";
+            inputEmail.classList.remove("check");
+            inputEmail.classList.add("un-check");
+        }
 
     }
+
+    //validate buttom
+    validTotal.onblur = function(){
+
+
+}
 
 
 /***************************************************************************************************************************************** */
@@ -213,9 +262,8 @@ window.onload = function() {
 
     function lettersOnly(inputText){
 
-        var letters="abcdefghyjklmnñopqrstuvwxyz";
+        var letters="abcdefghyjklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
 
-        inputText.value = inputText.value.toLowerCase();
         for(i=0; i<inputText.value.length; i++){
 
             if (letters.indexOf(inputText.value.charAt(i),0)==-1){
@@ -243,9 +291,8 @@ window.onload = function() {
 
     function alphanumericOnly(inputText){
 
-        var letters="abcdefghyjklmnñopqrstuvwxyz123456789 ";
+        var letters="abcdefghyjklmnñopqrstuvwxyz123456789ABCDEFGHYJKLMNÑOPQRSTUVWXYZ ";
 
-        inputText.value = inputText.value.toLowerCase();
         for(i=0; i<inputText.value.length; i++){
 
             if (letters.indexOf(inputText.value.charAt(i),0)==-1){
@@ -354,9 +401,8 @@ window.onload = function() {
 
     function lettersPassword(inputText){
 
-        var letters="abcdefghyjklmnñopqrstuvwxyz";
+        var letters="abcdefghyjklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
 
-        inputText.value = inputText.value.toLowerCase();
         for(i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
                 return true;
@@ -386,15 +432,13 @@ window.onload = function() {
         if(inputText.value.match(mailformat))
         {
             //alert("Valid email address!");
-            inputText.classList.remove("un-check");
-            inputText.classList.add("check");
+            
             return true;
         }
         else
         {
             //alert("You have entered an invalid email address!");
-            inputText.classList.remove("check");
-            inputText.classList.add("un-check");
+           
             return false;
         }
     }

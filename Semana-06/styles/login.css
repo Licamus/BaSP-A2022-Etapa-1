@@ -31,6 +31,15 @@ main{
     justify-content: center;
     padding-top: 5vh;
 }
+
+.check{
+    border: 3px solid #376741;
+}
+
+.un-check{
+    border: 3px solid #da0808;
+}
+
 @media (min-width: 480px) {
   
 }

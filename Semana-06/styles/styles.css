@@ -50,14 +50,6 @@ input{
     text-align: left;
 }
 
-.check{
-    border: 3px solid #376741;
-}
-
-.un-check{
-    border: 3px solid #da0808;
-}
-
 @media (min-width: 480px) {
     h2{
         font-size: 40px;

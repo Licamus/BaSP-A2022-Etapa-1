@@ -15,10 +15,11 @@ var errorp = document.createElement('p');
 // create p
 
 errorp.appendChild(document.createTextNode('HOLAAAAAAAAAAAAAAAAAAAAA'));
+
 //validate password
 
 inputPassword.onblur = function(){
-    if(numbersPassword(inputPassword) && lettersPassword(inputPassword)){
+    if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
         inputPassword.classList.remove("un-check");
         inputPassword.classList.add("check");
     }
@@ -39,11 +40,11 @@ inputEmail.onblur = function(){
 
 validTotal.onclick = function(){
 
-    if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail)){
+    if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail) && lenghtPassword(inputPassword)){
         alert("Valid account!");
     }
     else{
-        if((numbersPassword(inputPassword) && lettersPassword(inputPassword))==false){
+        if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword))==false){
             alert("Invalid password!");
         }
         if(validateEmail(inputEmail)==false){
@@ -65,6 +66,14 @@ inputPassword.onfocus = function(){
     inputPassword.classList.remove("un-check");
 }
 
+//lenght password
+
+function lenghtPassword(inputText){
+    if(inputText.value.length>=8){
+        return true;
+    }
+    return false;
+}
 
 //number password
 
@@ -100,7 +109,7 @@ function lettersPassword(inputText){
 
 function validateEmail(inputText)
 {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mailformat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
     if(inputText.value.match(mailformat))
     {

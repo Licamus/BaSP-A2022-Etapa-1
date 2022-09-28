@@ -14,7 +14,6 @@ window.onload = function() {
     var ghostp = document.getElementsByClassName('validation-ghost-p');
     var inputG = document.getElementsByTagName("input");
     var array = [];
-    var array2= [];
 
     for (i=0; i<=10; i++){
         array[i]=1;
@@ -151,7 +150,6 @@ window.onload = function() {
             array[3]=0;
             inputDate.classList.remove("un-check");
             inputDate.classList.add("check");
-            
         }
         else{
             inputDate.nextElementSibling.classList.add("on");
@@ -295,18 +293,20 @@ window.onload = function() {
     validTotal.onclick = function(e){
         e.preventDefault();
         var j=0, w=0;
-        for (i=0; i<=10; i++){
-            if((array[i]!=0) && (array[i]!=1)){
-                array2[j]=array[i];
-                j++;
-            }
-            if(array[i]==1){
-                w++;
-                inputG[i].nextElementSibling.classList.add("on");
-                inputG[i].nextElementSibling.innerText = "Complete this field";
-            }
-        }
+        var array2= [];
 
+        for (var i=0; i<=10; i++){
+
+                if((array[i]!=0) && (array[i]!=1)){
+                    array2[j]=array[i];
+                    j++;
+                }
+                 if(array[i]==1){
+                    w++;
+                    inputG[i].nextElementSibling.classList.add("on");
+                    inputG[i].nextElementSibling.innerText = "Complete this field";
+                }
+            }
         if(w>0){
             alert('Incompleted fields');
         }
@@ -317,7 +317,6 @@ window.onload = function() {
         else{
             alert(array2);
         }
-
     }
 
 

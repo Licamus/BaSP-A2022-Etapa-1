@@ -6,7 +6,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-h1 {
+h1{
     display: flex;
     font-size: 40px;
 }
@@ -18,7 +18,7 @@ h2{
     font-weight: 700;
 }
 
-h3 {
+h3{
     display: flex;
     padding-left: 5%;
     font-size: 35px;

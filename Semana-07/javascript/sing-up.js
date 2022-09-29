@@ -327,7 +327,7 @@ window.onload = function() {
 
     function lettersOnly(inputText){
 
-        var letters="abcdefghyjklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        var letters="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
         for(i=0; i<inputText.value.length; i++){
 
@@ -356,7 +356,7 @@ window.onload = function() {
 
     function alphanumericOnly(inputText){
 
-        var letters="abcdefghyjklmnñopqrstuvwxyz123456789ABCDEFGHYJKLMNÑOPQRSTUVWXYZ ";
+        var letters="abcdefghijklmnñopqrstuvwxyz123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ";
 
         for(i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)==-1){
@@ -464,7 +464,7 @@ window.onload = function() {
 
     function lettersPassword(inputText){
 
-        var letters="abcdefghyjklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        var letters="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
         for(i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){

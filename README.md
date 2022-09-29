@@ -14,6 +14,8 @@
 
 2- open the file "index.html" on your browser. You can also download the repository in your PC.
 
+3- You can also click on the github page that i created and navigate in it.
+
 ### Week 00 Figma
 Me and my coworker (Ramiro Amadeo) create the landing desktop interface with Figma.
 ### Week 01 HTML
@@ -31,3 +33,11 @@ I change all the css existing css code for flexbox, i tried to make the page the
 I modified the html code and eliminated some innecesary ids and classes. I change the lenght of the lines to
 a max lenght of 120 characters.
 I do some js exercises to practice, arrays, strings, functions, conditionals, cicles, etc.
+### Week 06 JS / HTML / CSS => DOM CREATION
+I created the HTML for Sing up and Login pages, i also add href in the pages so now you can navegate between the pages.
+I re-use some CSS styles and created some specific styles for the sing up and login.
+I make a validation for the forms with JS and HTML.
+### Week 07 JS Async and Storage
+I created a new function to the buttons, so now you can send data to a server with a (request) HTTP with fetch metod from JS.
+The request is only sended if you pass all the validations. The data of the form is sended as “query-params”.
+The data also is storage in the LocalStorage from the browser.

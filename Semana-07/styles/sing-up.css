@@ -1,0 +1,69 @@
+header > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #AACE9B;
+    color: white;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 65vh;
+    margin-bottom: 3vh;
+}
+
+#menu-icon{
+    display: flex;
+    position: fixed;
+}
+
+.fa-bars{
+    padding: 15px;
+    border: #F33413 solid 2px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #F33413;
+}
+
+#buttom-log-in{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.check{
+    border: 3px solid #376741;
+}
+
+.un-check{
+    border: 3px solid #da0808;
+}
+
+.validation-ghost-p{
+    display: none;
+    font-size: 12px;
+    padding: 2px;
+    color: #F33413;
+}
+
+.validation-ghost-p.on{
+    display: flex;
+}
+
+
+
+@media (min-width: 480px) {
+  
+}
+
+@media (min-width: 1024px) {
+    #menu-icon{
+        display: none;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+}

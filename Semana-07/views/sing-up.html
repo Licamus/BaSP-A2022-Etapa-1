@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Trackgenix
+        </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../assets/icons/logo-rr.ico">
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+        <link rel="stylesheet" type="text/css" href="../styles/sing-up.css">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
+        <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+        <link rel="stylesheet" type="text/css" href="../styles/sidebar.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300
+        ;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="../javascript/sing-up.js"></script>
+        <script src="https://kit.fontawesome.com/d7c9d962f7.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <aside>
+            <div id="logo">
+                <a href="index.html">
+                    <img src="../assets/icons/logo-rr-1.svg" alt="logo">
+                    <p>Trackgenix</p>
+                </a>
+            </div>
+            <div id="sidebar">
+                <nav id="sidebar-home">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>Home
+                    </a>
+                    <a href="sing-up.html">
+                        <i class="fa-solid fa-user"></i>Sign Up
+                    </a>
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>Login
+                    </a>
+                </nav>
+                <div id="sidebar-contact">
+                    <p id="contact-us-title">
+                        Contact Us
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>trackgenix@gmail.com
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone"></i>(000) 000-0000
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-building-flag"></i>1234 Somewhere Road #8254 Nashville,TN 00000-0000
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <header>
+            <div id="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <h1>Sing Up</h1>
+        </header>
+        <main>
+            <form id="form">
+                <div id="contact-main-container">
+                    <div id="name-container">
+                        <div class="box-contact">
+                            <label>
+                                Name
+                            </label>
+                            <input type="text" name="name-sing" placeholder="Your name Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Last Name
+                            </label>
+                            <input type="text" name="last-name-sing" placeholder="Your Last Name Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                ID
+                            </label>
+                            <input type="text" name="id-sing" placeholder="Your ID Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Date of Birth
+                            </label>
+                            <input type="date" name="date-of-birth" placeholder="Your Date of Birth Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Phonenumber
+                            </label>
+                            <input type="text" name="phonenumber" placeholder="Your Phonenumber Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Direction
+                            </label>
+                            <input type="text" name="direction" placeholder="Your Direction Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box-contact">
+                            <label>
+                                Location
+                            </label>
+                            <input type="text" name="location" placeholder="Your Location Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Postal Code
+                            </label>
+                            <input type="text" name="postal-code" placeholder="Your Postal Code Here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Email
+                            </label>
+                            <input type="text" name="emaillog" placeholder="Your email here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Password
+                            </label>
+                            <input type="password" name="passw" placeholder="Your password here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                        <div class="box-contact">
+                            <label>
+                                Repeat Password
+                            </label>
+                            <input type="password" name="passw-repeat" placeholder="Repeat password here">
+                            <p class="validation-ghost-p">*Required Field</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="buttom-log-in">
+                    <button class="buttom-message" name="button-validate">
+                        <i class="fa-regular fa-envelope"></i>
+                        Create
+                    </button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/home" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div>
+                <p>Rosario, Argentina</p>
+                <p>Copyright © 2022 Radium Rocket. All rights reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

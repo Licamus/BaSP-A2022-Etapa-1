@@ -1,0 +1,30 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #AACE9B;
+}
+
+footer > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    min-width: 40%;
+}
+
+footer > div > p{
+    text-align: center;
+}
+
+footer > div > a{
+    font-size: 40px;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer > div > a:hover{
+    font-size: 40px;
+    text-decoration: none;
+    color: #F33413;
+}

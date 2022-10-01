@@ -10,15 +10,11 @@ window.onload = function() {
 
     inputPassword.onblur = function(){
         if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
-            inputPassword.nextElementSibling.classList.remove("on");
-            inputPassword.classList.remove("un-check");
-            inputPassword.classList.add("check");
+            inputCreate(inputPassword);
         }
         else{
-            inputPassword.nextElementSibling.classList.add("on");
+            inputDelete(inputPassword);
             inputPassword.nextElementSibling.innerText = "Invalid Password";
-            inputPassword.classList.remove("check");
-            inputPassword.classList.add("un-check");
         }
     }
 
@@ -26,15 +22,11 @@ window.onload = function() {
 
     inputEmail.onblur = function(){
         if(validateEmail(inputEmail)){
-            inputEmail.nextElementSibling.classList.remove("on");
-            inputEmail.classList.remove("un-check");
-            inputEmail.classList.add("check");
+            inputCreate(inputEmail);
         }
         else{
-            inputEmail.nextElementSibling.classList.add("on");
+            inputDelete(inputEmail);
             inputEmail.nextElementSibling.innerText = "Invalid Email";
-            inputEmail.classList.remove("check");
-            inputEmail.classList.add("un-check");
         }
 
     }
@@ -49,33 +41,51 @@ window.onload = function() {
         else{
             if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword))==false){
                 if(lenghtCero(inputPassword)){
-                    inputPassword.nextElementSibling.classList.add("on");
-                    inputPassword.nextElementSibling.innerText = "Complete this field";
+                    inputNotComplete(inputPassword);
                 }
                 alert("Invalid password!");
             }
             if(validateEmail(inputEmail)==false){
                 if(lenghtCero(inputEmail)){
-                    inputEmail.nextElementSibling.classList.add("on");
-                    inputEmail.nextElementSibling.innerText = "Complete this field";
+                    inputNotComplete(inputEmail);
                 }
                 alert("Invalid email!");
             }
         }
     }
 
+    // PRUEBA
+    function inputCreate(inputText){
+        inputText.nextElementSibling.classList.remove("on");
+        inputText.classList.remove("un-check");
+        inputText.classList.add("check");
+    }
+
+    function inputDelete(inputText){
+        inputText.nextElementSibling.classList.add("on");
+        inputText.classList.remove("check");
+        inputText.classList.add("un-check");
+    }
+
+    function inputNotComplete(inputText) {
+        inputText.nextElementSibling.classList.add("on");
+        inputText.nextElementSibling.innerText = "Complete this field";
+    }
+
+    function inputFocus(inputText){
+        inputText.nextElementSibling.classList.remove("on");
+        inputText.classList.remove("check");
+        inputText.classList.remove("un-check");
+    }
+
     //ON FOCUS
 
     inputEmail.onfocus = function(){
-        inputEmail.nextElementSibling.classList.remove("on");
-        inputEmail.classList.remove("check");
-        inputEmail.classList.remove("un-check");
+        inputFocus(inputEmail);
     }
 
     inputPassword.onfocus = function(){
-        inputPassword.nextElementSibling.classList.remove("on");
-        inputPassword.classList.remove("check");
-        inputPassword.classList.remove("un-check");
+        inputFocus(inputPassword);
     }
 
     //lenght cero
@@ -115,7 +125,7 @@ window.onload = function() {
 
     function lettersPassword(inputText){
 
-        var letters="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        var letters="abcdefghijklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
 
         for(i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
@@ -129,9 +139,9 @@ window.onload = function() {
 
     function validateEmail(inputText)
     {
-        var mailformat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+        var mailFormat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-        if(inputText.value.match(mailformat))
+        if(inputText.value.match(mailFormat))
         {
             return true;
         }
@@ -140,5 +150,28 @@ window.onload = function() {
             return false;
         }
     }
+
+    //FETCH
+
+    var url='https://basp-m2022-api-rest-server.herokuapp.com/login ';
+
+    var promise= fetch(url);
+
+    promise
+        .then(function(res){
+            if(res.status >= 400){
+                throw new Error(res.statusText)
+            }
+        })
+        .then(function(res) {
+            return res.json();
+        })
+        .then(function(data) {
+
+            console.log(data.errors['2'].msg);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
 
 }

@@ -180,11 +180,7 @@ main {
     width: 80%;
 }
 
-#contact-container{
-    flex-basis: 33%;
-}
-
-#name-container{
+.name-container{
     flex-basis: 33%;
 }
 
@@ -198,8 +194,8 @@ main {
 }
 
 .box-contact > select:focus{
-    border: 2px solid #F33413;
-    color: #F33413;
+    border: 2px solid #373867;
+    color: #373867;
 }
 
 .box-contact > input{
@@ -208,9 +204,9 @@ main {
 }
 
 .box-contact > input:focus{
-    border: 2px solid #F33413;
-    outline: #F33413;
-    color: #F33413;
+    border: 2px solid #373867;
+    outline: #373867;
+    color: #373867;
 }
 
 .box-contact > label{

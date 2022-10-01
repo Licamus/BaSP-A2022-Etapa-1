@@ -19,90 +19,87 @@ window.onload = function() {
         array[i]=1;
     }
 
-    //On focus all
+     // PRUEBA
+     function inputCreate(inputText){
+        inputText.nextElementSibling.classList.remove("on");
+        inputText.classList.remove("un-check");
+        inputText.classList.add("check");
+    }
+
+    function inputDelete(inputText){
+        inputText.nextElementSibling.classList.add("on");
+        inputText.classList.remove("check");
+        inputText.classList.add("un-check");
+    }
+
+    function inputNotComplete(inputText) {
+        inputText.nextElementSibling.classList.add("on");
+        inputText.nextElementSibling.innerText = "Complete this field";
+    }
+
+    function inputFocus(inputText){
+        inputText.nextElementSibling.classList.remove("on");
+        inputText.classList.remove("check");
+        inputText.classList.remove("un-check");
+    }
+
+    //on focus
 
     inputName.onfocus = function(){
-        inputName.nextElementSibling.classList.remove("on");
-        inputName.classList.remove("check");
-        inputName.classList.remove("un-check");
+        inputFocus(inputName);
     }
 
     inputLastName.onfocus = function(){
-        inputLastName.nextElementSibling.classList.remove("on");
-        inputLastName.classList.remove("check");
-        inputLastName.classList.remove("un-check");
+        inputFocus(inputLastName);
     }
 
     inputId.onfocus = function(){
-        inputId.nextElementSibling.classList.remove("on");
-        inputId.classList.remove("check");
-        inputId.classList.remove("un-check");
+        inputFocus(inputId);
     }
 
     inputDate.onfocus = function(){
-        inputDate.nextElementSibling.classList.remove("on");
-        inputDate.classList.remove("check");
-        inputDate.classList.remove("un-check");
+        inputFocus(inputDate);
     }
 
     inputPhone.onfocus = function(){
-        inputPhone.nextElementSibling.classList.remove("on");
-        inputPhone.classList.remove("check");
-        inputPhone.classList.remove("un-check");
+        inputFocus(inputPhone);
     }
 
     inputDirection.onfocus = function(){
-        inputDirection.nextElementSibling.classList.remove("on");
-        inputDirection.classList.remove("check");
-        inputDirection.classList.remove("un-check");
+        inputFocus(inputDirection);
     }
 
     inputLocation.onfocus = function(){
-        inputLocation.nextElementSibling.classList.remove("on");
-        inputLocation.classList.remove("check");
-        inputLocation.classList.remove("un-check");
+        inputFocus(inputLocation);
     }
 
     inputPostalCode.onfocus = function(){
-        inputPostalCode.nextElementSibling.classList.remove("on");
-        inputPostalCode.classList.remove("check");
-        inputPostalCode.classList.remove("un-check");
+        inputFocus(inputPostalCode);
     }
 
     inputEmail.onfocus = function(){
-        inputEmail.nextElementSibling.classList.remove("on");
-        inputEmail.classList.remove("check");
-        inputEmail.classList.remove("un-check");
+        inputFocus(inputEmail);
     }
 
     inputPassword.onfocus = function(){
-        inputPassword.nextElementSibling.classList.remove("on");
-        inputPassword.classList.remove("check");
-        inputPassword.classList.remove("un-check");
+        inputFocus(inputPassword);
     }
 
-
     inputPasswordR.onfocus = function(){
-        inputPasswordR.nextElementSibling.classList.remove("on");
-        inputPasswordR.classList.remove("check");
-        inputPasswordR.classList.remove("un-check");
+        inputFocus(inputPasswordR);
     }
 
     //validate name
 
     inputName.onblur = function(){
         if(lettersOnly(inputName) && lenghtThree(inputName)){
-            inputName.nextElementSibling.classList.remove("on");
+            inputCreate(inputName);
             array[0]=0;
-            inputName.classList.remove("un-check");
-            inputName.classList.add("check");
         }
         else{
-            inputName.nextElementSibling.classList.add("on");
+            inputDelete(inputName);
             array[0]='Invalid Name\n';
             inputName.nextElementSibling.innerText = "Invalid Name";
-            inputName.classList.remove("check");
-            inputName.classList.add("un-check");
         }
     }
 
@@ -110,35 +107,27 @@ window.onload = function() {
 
     inputLastName.onblur = function(){
         if(lettersOnly(inputLastName) && lenghtThree(inputLastName)){
-            inputLastName.nextElementSibling.classList.remove("on");
+            inputCreate(inputLastName);
             array[1]=0;
-            inputLastName.classList.remove("un-check");
-            inputLastName.classList.add("check");
         }
+
         else{
-            inputLastName.nextElementSibling.classList.add("on");
+            inputDelete(inputLastName);
             array[1]='Invalid Last Name\n';
             inputLastName.nextElementSibling.innerText = "Invalid Last Name";
-            inputLastName.classList.remove("check");
-            inputLastName.classList.add("un-check");
         }
     }
-
     //validate ID
 
     inputId.onblur = function(){
         if(numbersOnly(inputId) && lenghtSeven(inputId)){
-            inputId.nextElementSibling.classList.remove("on");
+            inputCreate(inputId);
             array[2]=0;
-            inputId.classList.remove("un-check");
-            inputId.classList.add("check");
         }
         else{
-            inputId.nextElementSibling.classList.add("on");
+            inputDelete(inputId);
             array[2]='Invalid ID\n';
             inputId.nextElementSibling.innerText = "Invalid ID";
-            inputId.classList.remove("check");
-            inputId.classList.add("un-check");
         }
     }
 
@@ -146,17 +135,13 @@ window.onload = function() {
 
     inputDate.onblur = function() {
         if(lenghtCero(inputDate)==false){
-            inputDate.nextElementSibling.classList.remove("on");
+            inputCreate(inputDate);
             array[3]=0;
-            inputDate.classList.remove("un-check");
-            inputDate.classList.add("check");
         }
         else{
-            inputDate.nextElementSibling.classList.add("on");
+            inputDelete(inputDate);
             array[3]='Invalid Date\n';
             inputDate.nextElementSibling.innerText = "Invalid Date";
-            inputDate.classList.remove("check");
-            inputDate.classList.add("un-check");
         }
     }
 
@@ -164,17 +149,14 @@ window.onload = function() {
 
     inputPhone.onblur = function(){
         if(numbersOnly(inputPhone) && lenghtTen(inputPhone)){
-            inputPhone.nextElementSibling.classList.remove("on");
+            inputCreate(inputPhone);
             array[4]=0;
-            inputPhone.classList.remove("un-check");
-            inputPhone.classList.add("check");
         }
         else{
-            inputPhone.nextElementSibling.classList.add("on");
+            inputDelete(inputPhone);
             array[4]='Invalid Phone\n';
             inputPhone.nextElementSibling.innerText = "Invalid Phone";
-            inputPhone.classList.remove("check");
-            inputPhone.classList.add("un-check");
+            
         }
     }
 
@@ -182,17 +164,13 @@ window.onload = function() {
 
     inputDirection.onblur = function(){
         if(alphanumericOnly(inputDirection) && lenghtThree(inputDirection) && spaceB(inputDirection) && numbersPassword(inputDirection) && lettersPassword(inputDirection)){
-            inputDirection.nextElementSibling.classList.remove("on");
+            inputCreate(inputDirection);
             array[5]=0;
-            inputDirection.classList.remove("un-check");
-            inputDirection.classList.add("check");
         }
         else{
-            inputDirection.nextElementSibling.classList.add("on");
+            inputDelete(inputDirection);
             array[5]='Invalid Direction\n';
             inputDirection.nextElementSibling.innerText = "Invalid Direction";
-            inputDirection.classList.remove("check");
-            inputDirection.classList.add("un-check");
         }
     }
 
@@ -200,17 +178,13 @@ window.onload = function() {
 
     inputLocation.onblur = function(){
         if(alphanumericOnly(inputLocation) && lenghtThree(inputLocation)){
-            inputLocation.nextElementSibling.classList.remove("on");
+            inputCreate(inputLocation);
             array[6]=0;
-            inputLocation.classList.remove("un-check");
-            inputLocation.classList.add("check");
         }
         else{
-            inputLocation.nextElementSibling.classList.add("on");
+            inputDelete(inputLocation);
             array[6]='Invalid Location\n';
             inputLocation.nextElementSibling.innerText = "Invalid Location";
-            inputLocation.classList.remove("check");
-            inputLocation.classList.add("un-check");
         }
     }
 
@@ -218,17 +192,13 @@ window.onload = function() {
 
      inputPostalCode.onblur = function(){
         if(numbersOnly(inputPostalCode) && lenghtFour(inputPostalCode) && lenghtFiveMax(inputPostalCode)){
-            inputPostalCode.nextElementSibling.classList.remove("on");
+            inputCreate(inputPostalCode);
             array[7]=0;
-            inputPostalCode.classList.remove("un-check");
-            inputPostalCode.classList.add("check");
         }
         else{
-            inputPostalCode.nextElementSibling.classList.add("on");
+            inputDelete(inputPostalCode);
             array[7]='Invalid Postal Code\n';
             inputPostalCode.nextElementSibling.innerText = "Invalid Postal Code";
-            inputPostalCode.classList.remove("check");
-            inputPostalCode.classList.add("un-check");
         }
     }
 
@@ -237,17 +207,13 @@ window.onload = function() {
 
     inputPassword.onblur = function(){
         if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
-            inputPassword.nextElementSibling.classList.remove("on");
+            inputCreate(inputPassword);
             array[8]=0;
-            inputPassword.classList.remove("un-check");
-            inputPassword.classList.add("check");
         }
         else{
-            inputPassword.nextElementSibling.classList.add("on");
+            inputDelete(inputPassword);
             array[8]='Invalid Password\n';
             inputPassword.nextElementSibling.innerText = "Invalid Password";
-            inputPassword.classList.remove("check");
-            inputPassword.classList.add("un-check");
         }
     }
 
@@ -255,17 +221,13 @@ window.onload = function() {
 
     inputPasswordR.onblur = function(){
         if(rePassword(inputPasswordR,inputPassword) && (lenghtCero(inputPasswordR)==false)){
-            inputPasswordR.nextElementSibling.classList.remove("on");
+            inputCreate(inputPasswordR);
             array[9]=0;
-            inputPasswordR.classList.remove("un-check");
-            inputPasswordR.classList.add("check");
         }
         else{
-            inputPasswordR.nextElementSibling.classList.add("on");
+            inputDelete(inputPassword);
             array[9]='Invalid Repeat Password\n';
             inputPasswordR.nextElementSibling.innerText = "Invalid Repeat Password";
-            inputPasswordR.classList.remove("check");
-            inputPasswordR.classList.add("un-check");
         }
     }
 
@@ -273,17 +235,13 @@ window.onload = function() {
 
     inputEmail.onblur = function(){
         if(validateEmail(inputEmail)){
-            inputEmail.nextElementSibling.classList.remove("on");
+            inputCreate(inputEmail);
             array[10]=0;
-            inputEmail.classList.remove("un-check");
-            inputEmail.classList.add("check");
         }
         else{
-            inputEmail.nextElementSibling.classList.add("on");
+            inputDelete(inputEmail);
             array[10]='Invalid Email\n';
             inputEmail.nextElementSibling.innerText = "Invalid Email\n";
-            inputEmail.classList.remove("check");
-            inputEmail.classList.add("un-check");
         }
 
     }
@@ -490,9 +448,9 @@ window.onload = function() {
 
     function validateEmail(inputText)
     {
-        var mailformat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+        var mailFormat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-        if(inputText.value.match(mailformat))
+        if(inputText.value.match(mailFormat))
         {
             return true;
         }
@@ -502,3 +460,4 @@ window.onload = function() {
         }
     }
 }
+

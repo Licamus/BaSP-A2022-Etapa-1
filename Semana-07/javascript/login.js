@@ -83,9 +83,9 @@ window.onload = function() {
 
     function numbersPassword(inputText) {
 
-        var numbers="0123456789";
+        var numbers = "0123456789";
 
-        for(i=0; i<inputText.value.length; i++){
+        for(var i=0; i<inputText.value.length; i++){
             if (numbers.indexOf(inputText.value.charAt(i),0)!=-1) {
                 return true;
             }
@@ -95,9 +95,9 @@ window.onload = function() {
 
     function lettersPassword(inputText){
 
-        var letters="abcdefghijklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        var letters = "abcdefghijklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
 
-        for(i=0; i<inputText.value.length; i++){
+        for(var i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
                 return true;
             }
@@ -119,9 +119,9 @@ window.onload = function() {
 
     //FETCH
 
-    var url='https://basp-m2022-api-rest-server.herokuapp.com/login ';
+    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
 
-    var promise= fetch(url);
+    var promise = fetch(url);
 
     promise
         .then(function(res){
@@ -139,5 +139,4 @@ window.onload = function() {
         .catch(function(error){
             console.log(error);
         })
-
 }

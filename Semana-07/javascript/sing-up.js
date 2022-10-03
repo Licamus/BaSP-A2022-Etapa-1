@@ -32,11 +32,6 @@ window.onload = function() {
         inputText.classList.add("un-check");
     }
 
-    function inputNotComplete(inputText) {
-        inputText.nextElementSibling.classList.add("on");
-        inputText.nextElementSibling.innerText = "Complete this field";
-    }
-
     function inputFocus(inputText){
         inputText.nextElementSibling.classList.remove("on");
         inputText.classList.remove("check");
@@ -156,7 +151,6 @@ window.onload = function() {
             inputDelete(inputPhone);
             array[4]='Invalid Phone\n';
             inputPhone.nextElementSibling.innerText = "Invalid Phone";
-            
         }
     }
 

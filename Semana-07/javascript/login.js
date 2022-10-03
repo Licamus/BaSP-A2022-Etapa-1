@@ -6,62 +6,57 @@ window.onload = function() {
 
     var validTotal = document.querySelector('[name=button-validate]');
 
-    //validate password
-
-    inputPassword.onblur = function(){
-        if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword)){
+    inputPassword.onblur = function() {
+        if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && (inputPassword.value.length>=8)){
             inputCreate(inputPassword);
         }
         else{
             inputDelete(inputPassword);
-            inputPassword.nextElementSibling.innerText = "Invalid Password";
+            inputPassword.nextElementSibling.innerText = 'Invalid Password';
         }
     }
 
-    //validate email
-
-    inputEmail.onblur = function(){
+    inputEmail.onblur = function() {
         if(validateEmail(inputEmail)){
             inputCreate(inputEmail);
         }
         else{
             inputDelete(inputEmail);
-            inputEmail.nextElementSibling.innerText = "Invalid Email";
+            inputEmail.nextElementSibling.innerText = 'Invalid Email';
         }
-
     }
 
-    //validate buttom
-
-    validTotal.onclick = function(e){
+    validTotal.onclick = function(e) {
         e.preventDefault();
-        if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail) && lenghtPassword(inputPassword)){
-            alert("Valid account!");
+        var array = ['Correct Email ','Correct Password '];
+
+        if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail) && (inputPassword.value.length>=8)){
+            alert('Valid account!');
         }
         else{
-            if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && lenghtPassword(inputPassword))==false){
-                if(lenghtCero(inputPassword)){
+            if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && (inputPassword.value.length>=8))==false){
+                if(inputPassword.value.length==0) {
                     inputNotComplete(inputPassword);
                 }
-                alert("Invalid password!");
+                array[1] = 'Invalid password!   ';
             }
-            if(validateEmail(inputEmail)==false){
-                if(lenghtCero(inputEmail)){
+            if(validateEmail(inputEmail)==false) {
+                if(inputEmail.value.length==0) {
                     inputNotComplete(inputEmail);
                 }
-                alert("Invalid email!");
+                array[0] = 'Invalid email!  ';
             }
+            alert(array);
         }
     }
 
-    // PRUEBA
-    function inputCreate(inputText){
+    function inputCreate(inputText) {
         inputText.nextElementSibling.classList.remove("on");
         inputText.classList.remove("un-check");
         inputText.classList.add("check");
     }
 
-    function inputDelete(inputText){
+    function inputDelete(inputText) {
         inputText.nextElementSibling.classList.add("on");
         inputText.classList.remove("check");
         inputText.classList.add("un-check");
@@ -72,56 +67,31 @@ window.onload = function() {
         inputText.nextElementSibling.innerText = "Complete this field";
     }
 
-    function inputFocus(inputText){
+    function inputFocus(inputText) {
         inputText.nextElementSibling.classList.remove("on");
         inputText.classList.remove("check");
         inputText.classList.remove("un-check");
     }
 
-    //ON FOCUS
-
-    inputEmail.onfocus = function(){
+    inputEmail.onfocus = function() {
         inputFocus(inputEmail);
     }
 
-    inputPassword.onfocus = function(){
+    inputPassword.onfocus = function() {
         inputFocus(inputPassword);
     }
 
-    //lenght cero
-
-    function lenghtCero(inputText){
-        if(inputText.value.length==0){
-            return true;
-        }
-        return false;
-    }
-
-    //lenght password
-
-    function lenghtPassword(inputText){
-        if(inputText.value.length>=8){
-            return true;
-        }
-        return false;
-    }
-
-    //number password
-
-    function numbersPassword(inputText){
+    function numbersPassword(inputText) {
 
         var numbers="0123456789";
 
         for(i=0; i<inputText.value.length; i++){
-            if (numbers.indexOf(inputText.value.charAt(i),0)!=-1){
+            if (numbers.indexOf(inputText.value.charAt(i),0)!=-1) {
                 return true;
             }
         }
         return false;
     }
-
-
-    //letter password
 
     function lettersPassword(inputText){
 
@@ -130,23 +100,19 @@ window.onload = function() {
         for(i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
                 return true;
+            }
         }
-    }
     return false;
     }
-
-    // Validate email
 
     function validateEmail(inputText)
     {
         var mailFormat =  /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-        if(inputText.value.match(mailFormat))
-        {
+        if(inputText.value.match(mailFormat)) {
             return true;
         }
-        else
-        {
+        else {
             return false;
         }
     }

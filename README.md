@@ -16,6 +16,8 @@
 
 3- You can also click on the github page that i created and navigate in it.
 
+4- Link of this week: https://licamus.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html
+
 ### Week 00 Figma
 Me and my coworker (Ramiro Amadeo) create the landing desktop interface with Figma.
 ### Week 01 HTML

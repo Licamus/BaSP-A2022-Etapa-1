@@ -33,7 +33,7 @@ window.onload = function() {
         if(numbersPassword(inputPassword) && lettersPassword(inputPassword) && validateEmail(inputEmail) && (inputPassword.value.length>=8)){
             alert('Valid account!');
         }
-        else{
+        else {
             if((numbersPassword(inputPassword) && lettersPassword(inputPassword) && (inputPassword.value.length>=8))==false){
                 if(inputPassword.value.length==0) {
                     inputNotComplete(inputPassword);
@@ -48,6 +48,39 @@ window.onload = function() {
             }
             alert(array);
         }
+
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value + '&password=' + inputPassword.value;
+
+        // https://basp-m2022-api-rest-server.herokuapp.com/login?email=rose@radiumrocket.com&password=BaSP2022
+
+        var promise = fetch(url);
+
+        var arrayError = [];
+
+        promise
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(data) {
+                if(data.success) {
+                    alert(data.msg);
+                }
+                else {
+                    if(data.errors === undefined) {
+                        arrayError[0] = data.msg;
+                        throw new Error(arrayError);
+                    }
+                    else {
+                        for(var i=0; i < data.errors.length ; i++) {
+                            arrayError[i] = data.errors[i].msg;
+                        }
+                        throw new Error(arrayError);
+                    }
+                }
+            })
+            .catch(function(error) {
+                alert(error);
+            })
     }
 
     function inputCreate(inputText) {
@@ -95,7 +128,7 @@ window.onload = function() {
 
     function lettersPassword(inputText){
 
-        var letters = "abcdefghijklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
+        var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHYJKLMNÑOPQRSTUVWXYZ';
 
         for(var i=0; i<inputText.value.length; i++){
             if (letters.indexOf(inputText.value.charAt(i),0)!=-1){
@@ -116,27 +149,4 @@ window.onload = function() {
             return false;
         }
     }
-
-    //FETCH
-
-    var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
-
-    var promise = fetch(url);
-
-    promise
-        .then(function(res){
-            if(res.status >= 400){
-                throw new Error(res.statusText)
-            }
-        })
-        .then(function(res) {
-            return res.json();
-        })
-        .then(function(data) {
-
-            console.log(data.errors['2'].msg);
-        })
-        .catch(function(error){
-            console.log(error);
-        })
 }

@@ -13,6 +13,7 @@ window.onload = function() {
     var validTotal = document.querySelector('[name=button-validate]');
     var inputG = document.getElementsByTagName("input");
     var array = [];
+    var inputDateAux;
 
     for (i=0; i<=10; i++){
         array[i]=1;
@@ -117,7 +118,13 @@ window.onload = function() {
         }
     }
 
-    inputDate.onblur = function() {
+    inputDate.onblur = function(e) {
+        inputDateAux = e.target.value;
+            var date = inputDateAux.split('-');
+            var year = date.shift();
+            date.push(year);
+            inputDateAux = date.join('/');
+            console.log(inputDateAux);
         if(inputDate.value.length!=0){
             inputCreate(inputDate);
             array[3]=0;
@@ -154,7 +161,7 @@ window.onload = function() {
     }
 
     inputLocation.onblur = function() {
-        if(alphanumericOnly(inputLocation) && (inputLocation.value.length>=3) && numbersPassword(inputLocation) && lettersPassword(inputLocation)) {
+        if(alphanumericOnly(inputLocation) && (inputLocation.value.length>=3) && lettersPassword(inputLocation)) {
             inputCreate(inputLocation);
             array[6]=0;
         }
@@ -238,11 +245,53 @@ window.onload = function() {
         else {
             alert('You enter an invalid format to this forms:\n' + array2);
         }
+
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value + '&lastName=' + inputLastName.value + '&dni=' + inputId.value + '&dob=' + inputDateAux + '&phone=' + inputPhone.value
+        + '&address=' + inputDirection.value + '&city=' + inputLocation.value + '&zip='+ inputPostalCode.value + '&email='+ inputEmail.value +'&password='+ inputPassword.value;
+
+        var promise = fetch(url);
+
+        var arrayError = [];
+
+        promise
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(data) {
+                if(data.success) {
+                    localStorage.setItem('name',inputName.value);
+                    localStorage.setItem('lastName',inputLastName.value);
+                    localStorage.setItem('dni',inputId.value);
+                    localStorage.setItem('dob',inputDateAux);
+                    localStorage.setItem('phone',inputPhone.value);
+                    localStorage.setItem('address',inputDirection.value);
+                    localStorage.setItem('city',inputLocation.value);
+                    localStorage.setItem('zip',inputPostalCode.value);
+                    localStorage.setItem('password',inputPassword.value);
+
+                    alert(data.msg);
+                }
+                else {
+                    if(data.errors === undefined) {
+                        arrayError[0] = data.msg;
+                        throw new Error(arrayError);
+                    }
+                    else {
+                        for(var i=0; i < data.errors.length ; i++) {
+                            arrayError[i] = data.errors[i].msg;
+                        }
+                        throw new Error(arrayError);
+                    }
+                }
+            })
+            .catch(function(error) {
+                alert(error);
+            })
     }
 
     function lettersOnly(inputText){
 
-        var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+        var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ ';
 
         for(var i=0; i<inputText.value.length; i++) {
 
@@ -340,4 +389,3 @@ window.onload = function() {
         }
     }
 }
-

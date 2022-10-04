@@ -15,8 +15,41 @@ window.onload = function() {
     var array = [];
     var inputDateAux;
 
-    for (i=0; i<=10; i++){
-        array[i]=1;
+
+    if (localStorage.getItem('name') !== undefined && localStorage.getItem('name')) {
+        for (i=0; i<=10; i++) {
+            array[i]=0;
+        }
+    }
+    else {
+        for (i=0; i<=10; i++) {
+            array[i]=1;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", restoreValues());
+
+    function restoreValues() {
+
+        if (localStorage.getItem('name') !== undefined && localStorage.getItem('name')) {
+            inputName.value = localStorage.getItem('name');
+            inputLastName.value = localStorage.getItem('lastName');
+            inputId.value = localStorage.getItem('dni');
+            inputPhone.value = localStorage.getItem('phone');
+            inputDirection.value = localStorage.getItem('address');
+            inputLocation.value = localStorage.getItem('city');
+            inputPostalCode.value = localStorage.getItem('zip');
+            inputPassword.value = localStorage.getItem('password');
+            inputPasswordR.value = localStorage.getItem('password');
+            inputEmail.value = localStorage.getItem('email');
+            inputDateAux = localStorage.getItem('dob');
+            var yourdate = inputDateAux.split("/").reverse();
+            var tmp = yourdate[2];
+            yourdate[2] = yourdate[1];
+            yourdate[1] = tmp;
+            yourdate = yourdate.join("-");
+            inputDate.value = yourdate;
+        }
     }
 
     function inputCreate(inputText) {
@@ -120,11 +153,11 @@ window.onload = function() {
 
     inputDate.onblur = function(e) {
         inputDateAux = e.target.value;
-            var date = inputDateAux.split('-');
-            var year = date.shift();
-            date.push(year);
-            inputDateAux = date.join('/');
-            console.log(inputDateAux);
+        var date = inputDateAux.split('-');
+        var year = date.shift();
+        date.push(year);
+        inputDateAux = date.join('/');
+
         if(inputDate.value.length!=0){
             inputCreate(inputDate);
             array[3]=0;
@@ -223,7 +256,7 @@ window.onload = function() {
     validTotal.onclick = function(e) {
         e.preventDefault();
         var j=0, w=0;
-        var array2= ['Please complete all the fields correctly to sent the form'];
+        var array2= [];
 
         for (var i=0; i<=10; i++) {
             if((array[i]!=0) && (array[i]!=1)) {
@@ -268,6 +301,7 @@ window.onload = function() {
                     localStorage.setItem('city',inputLocation.value);
                     localStorage.setItem('zip',inputPostalCode.value);
                     localStorage.setItem('password',inputPassword.value);
+                    localStorage.setItem('email', inputEmail.value);
 
                     alert(data.msg);
                 }

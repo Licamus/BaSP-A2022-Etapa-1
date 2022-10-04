@@ -278,10 +278,10 @@ window.onload = function() {
             alert('You enter an invalid format to this forms:\n' + array2);
         }
 
-        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value + '&lastName=' 
-        + inputLastName.value + '&dni=' + inputId.value + '&dob=' + inputDateAux + '&phone=' + inputPhone.value
-        + '&address=' + inputDirection.value + '&city=' + inputLocation.value + '&zip='+ inputPostalCode.value 
-        + '&email='+ inputEmail.value +'&password='+ inputPassword.value;
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + inputName.value + '&lastName=' +
+         inputLastName.value + '&dni=' + inputId.value + '&dob=' + inputDateAux + '&phone=' + inputPhone.value
+        + '&address=' + inputDirection.value + '&city=' + inputLocation.value + '&zip='+ inputPostalCode.value +
+         '&email='+ inputEmail.value +'&password='+ inputPassword.value;
 
         var promise = fetch(url);
 

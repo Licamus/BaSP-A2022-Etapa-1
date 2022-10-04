@@ -42,4 +42,4 @@ I make a validation for the forms with JS and HTML.
 ### Week 07 JS Async and Storage
 I created a new function to the buttons, so now you can send data to a server with a (request) HTTP with fetch metod from JS.
 The request is only sended if you pass all the validations. The data of the form is sended as “query-params”.
-The data also is storage in the LocalStorage from the browser.
+The data also is storage in the LocalStorage from the browser and reload automactly when you refresh the page after you create an account.

@@ -51,8 +51,6 @@ window.onload = function() {
 
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value + '&password=' + inputPassword.value;
 
-        // https://basp-m2022-api-rest-server.herokuapp.com/login?email=rose@radiumrocket.com&password=BaSP2022
-
         var promise = fetch(url);
 
         var arrayError = [];
